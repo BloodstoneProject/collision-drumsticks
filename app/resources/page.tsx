@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { PageHero } from '@/components/PageHero';
 import { BlogCard } from '@/components/BlogCard';
 import { NewsletterForm } from '@/components/NewsletterForm';
-import { blogPosts } from '@/lib/seed-data';
+import { getPosts } from '@/lib/data';
 
+export const revalidate = 600;
 export const metadata: Metadata = {
   title: 'Resources for Drummers',
   description:
@@ -21,10 +22,10 @@ const CATS = [
   { slug: 'news', label: 'News' },
 ];
 
-export default function ResourcesPage() {
-  const sorted = [...blogPosts].sort((a, b) => b.published_at.localeCompare(a.published_at));
+export default async function ResourcesPage() {
+  const sorted = await getPosts();
   const featured = sorted[0];
-  const rest = sorted.slice(1);
+  const rest = sorted.slice(1, 25);
 
   return (
     <>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { PageHero } from '@/components/PageHero';
 import { ProductCard } from '@/components/ProductCard';
-import { products } from '@/lib/seed-data';
+import { getProducts } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   description: 'Your Collision Drumsticks cart.',
 };
 
-export default function CartPage() {
+export default async function CartPage() {
+  const products = await getProducts();
   // Placeholder cart — Snipcart will replace this with a server-rendered cart
   const cart = [
     { product: products[0], quantity: 1, variant: products[0]?.variants[0] },

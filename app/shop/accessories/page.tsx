@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/PageHero';
 import { ProductCard } from '@/components/ProductCard';
-import { products } from '@/lib/seed-data';
+import { getProductsByCategory } from '@/lib/data';
 
+export const revalidate = 600;
 export const metadata: Metadata = {
   title: 'Accessories',
   description: 'Stick bags, practice pads, drum keys, and grip aids from Collision.',
 };
 
-export default function AccessoriesPage() {
-  const list = products.filter((p) => p.category === 'accessories');
+export default async function AccessoriesPage() {
+  const list = await getProductsByCategory('accessories');
   return (
     <>
       <PageHero

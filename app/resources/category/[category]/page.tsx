@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PageHero } from '@/components/PageHero';
 import { BlogCard } from '@/components/BlogCard';
-import { blogPosts } from '@/lib/seed-data';
+import { getPostsByCategory } from '@/lib/data';
+
+export const revalidate = 600;
 
 const VALID = ['tips', 'gear', 'community', 'news', 'guides', 'artist-spotlight'];
 
@@ -24,7 +26,7 @@ export default async function CategoryPage({ params }: PageProps<'/resources/cat
   const { category } = await params;
   if (!VALID.includes(category)) notFound();
 
-  const posts = blogPosts.filter((p) => p.category === category);
+  const posts = await getPostsByCategory(category);
 
   return (
     <>

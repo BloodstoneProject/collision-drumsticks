@@ -2,16 +2,17 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHero } from '@/components/PageHero';
 import { ProductCard } from '@/components/ProductCard';
-import { products } from '@/lib/seed-data';
+import { getProductsByCategory } from '@/lib/data';
 
+export const revalidate = 600;
 export const metadata: Metadata = {
   title: 'Drumsticks — American Hickory',
   description:
     'Every Collision drumstick model: 5A, 5B, 5AR Reach, 5BR Reach, 7A, 7AR, 2B. Wood and nylon tip. Natural and Stealth Black. Weight-matched in Newcastle.',
 };
 
-export default function DrumsticksPage() {
-  const drumsticks = products.filter((p) => p.category === 'drumsticks');
+export default async function DrumsticksPage() {
+  const drumsticks = await getProductsByCategory('drumsticks');
   const subcats = [
     { slug: 'wood-tip', label: 'Wood Tip' },
     { slug: 'nylon-tip', label: 'Nylon Tip' },

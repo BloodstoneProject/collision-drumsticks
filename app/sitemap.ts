@@ -1,9 +1,14 @@
 import type { MetadataRoute } from 'next';
-import { products, artists, blogPosts } from '@/lib/seed-data';
+import { getProducts, getPosts, getArtists } from '@/lib/data';
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.collisiondrumsticks.com';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [products, artists, blogPosts] = await Promise.all([
+    getProducts(),
+    getArtists(),
+    getPosts(),
+  ]);
   const staticPaths = [
     '',
     '/shop',

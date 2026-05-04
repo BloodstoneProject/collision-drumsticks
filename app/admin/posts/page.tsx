@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { blogPosts } from '@/lib/seed-data';
+import { getPosts } from '@/lib/data';
 
 export const metadata = { title: 'Admin Blog', robots: 'noindex, nofollow' };
 
-export default function AdminPosts() {
+export default async function AdminPosts() {
+  const blogPosts = await getPosts();
   return (
     <div>
       <div className="flex items-center justify-between mb-6">

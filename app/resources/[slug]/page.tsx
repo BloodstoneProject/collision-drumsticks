@@ -3,19 +3,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { format } from 'date-fns';
-import { blogPosts } from '@/lib/seed-data';
+import { getAllPostSlugs, getPost, getPosts } from '@/lib/data';
 import { BlogCard } from '@/components/BlogCard';
 import { NewsletterForm } from '@/components/NewsletterForm';
 
+export const revalidate = 600;
+
 export async function generateStaticParams() {
-  return blogPosts.map((p) => ({ slug: p.slug }));
+  const slugs = await getAllPostSlugs();
+  // Cap pre-rendered slugs to keep the build small; the rest render on demand via ISR
+  return slugs.slice(0, 50).map((slug) => ({ slug }));
 }
+
+export const dynamicParams = true;
 
 export async function generateMetadata({
   params,
 }: PageProps<'/resources/[slug]'>): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = await getPost(slug);
   if (!post) return {};
   return {
     title: post.title,
@@ -71,11 +77,12 @@ function renderMarkdown(md: string) {
 
 export default async function PostPage({ params }: PageProps<'/resources/[slug]'>) {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = await getPost(slug);
   if (!post) notFound();
 
-  const related = blogPosts
-    .filter((p) => p.id !== post.id && (p.category === post.category || p.tags.some((t) => post.tags.includes(t))))
+  const allPosts = await getPosts();
+  const related = allPosts
+    .filter((p) => p.id !== post.id && p.category === post.category)
     .slice(0, 3);
 
   const articleLd = {

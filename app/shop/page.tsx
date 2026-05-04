@@ -2,14 +2,16 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHero } from '@/components/PageHero';
 import { ProductCard } from '@/components/ProductCard';
-import { products } from '@/lib/seed-data';
+import { getProducts } from '@/lib/data';
 
+export const revalidate = 600;
 export const metadata: Metadata = {
   title: 'Shop',
   description: 'Premium American Hickory drumsticks, accessories, and apparel. Free UK shipping over £49.',
 };
 
-export default function ShopPage() {
+export default async function ShopPage() {
+  const products = await getProducts();
   const cats = [
     { slug: 'drumsticks', label: 'Drumsticks' },
     { slug: 'accessories', label: 'Accessories' },

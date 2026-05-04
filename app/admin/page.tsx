@@ -1,8 +1,14 @@
-import { products, artists, blogPosts, faqs } from '@/lib/seed-data';
+import { getProducts, getPosts, getFAQs, getArtists } from '@/lib/data';
 
 export const metadata = { title: 'Admin Overview', robots: 'noindex, nofollow' };
 
-export default function AdminOverview() {
+export default async function AdminOverview() {
+  const [products, artists, blogPosts, faqs] = await Promise.all([
+    getProducts(),
+    getArtists(),
+    getPosts(),
+    getFAQs(),
+  ]);
   const stats = [
     { label: 'Products', value: products.length },
     { label: 'Artists', value: artists.length },

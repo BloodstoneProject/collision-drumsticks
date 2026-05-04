@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/PageHero';
 import { FAQAccordion } from '@/components/FAQAccordion';
-import { faqs } from '@/lib/seed-data';
+import { getFAQs } from '@/lib/data';
 
+export const revalidate = 600;
 export const metadata: Metadata = {
   title: 'FAQ',
   description:
@@ -19,7 +20,8 @@ const CATEGORIES = [
   { slug: 'backstage', label: 'Backstage' },
 ];
 
-export default function FAQPage() {
+export default async function FAQPage() {
+  const faqs = await getFAQs();
   const faqLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',

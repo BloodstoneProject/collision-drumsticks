@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/PageHero';
 import { ProductCard } from '@/components/ProductCard';
-import { products } from '@/lib/seed-data';
+import { getProductsByCategory } from '@/lib/data';
 
+export const revalidate = 600;
 export const metadata: Metadata = {
   title: 'Apparel',
   description: 'Heavyweight tees, hoodies, and headwear from Collision Drumsticks.',
 };
 
-export default function ApparelPage() {
-  const list = products.filter((p) => p.category === 'apparel');
+export default async function ApparelPage() {
+  const list = await getProductsByCategory('apparel');
   return (
     <>
       <PageHero

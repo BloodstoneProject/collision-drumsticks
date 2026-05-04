@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import { products } from '@/lib/seed-data';
+import { getProducts } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
 export const metadata = { title: 'Admin Products', robots: 'noindex, nofollow' };
 
-export default function AdminProducts() {
+export default async function AdminProducts() {
+  const products = await getProducts();
   return (
     <div>
       <div className="flex items-center justify-between mb-6">

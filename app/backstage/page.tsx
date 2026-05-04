@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { PageHero } from '@/components/PageHero';
 import { CTABanner } from '@/components/CTABanner';
 import { FAQAccordion } from '@/components/FAQAccordion';
-import { faqs } from '@/lib/seed-data';
+import { getFAQs } from '@/lib/data';
+
+export const revalidate = 600;
 
 export const metadata: Metadata = {
   title: 'Collision Backstage — Membership for Modern Drummers',
@@ -12,7 +14,8 @@ export const metadata: Metadata = {
 
 const KAJABI_URL = 'https://collision.mykajabi.com/offers/rGyr2hFS/checkout';
 
-export default function BackstagePage() {
+export default async function BackstagePage() {
+  const faqs = await getFAQs();
   const backstageFaqs = faqs.filter((f) => f.category === 'backstage');
   const doorsOpen = false; // placeholder
 

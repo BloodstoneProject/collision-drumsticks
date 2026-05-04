@@ -2,21 +2,29 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { products, reviews } from '@/lib/seed-data';
 import { ProductCard } from '@/components/ProductCard';
 import { RatingStars } from '@/components/RatingStars';
 import { ProductActions } from './ProductActions';
 import { formatPrice } from '@/lib/utils';
+import {
+  getAllProductSlugs,
+  getProduct,
+  getProductsByCategory,
+  getProductReviews,
+} from '@/lib/data';
+
+export const revalidate = 600;
 
 export async function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
+  const slugs = await getAllProductSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PageProps<'/product/[slug]'>): Promise<Metadata> {
   const { slug } = await params;
-  const product = products.find((p) => p.slug === slug);
+  const product = await getProduct(slug);
   if (!product) return {};
   return {
     title: product.name,
@@ -31,13 +39,15 @@ export async function generateMetadata({
 
 export default async function ProductPage({ params }: PageProps<'/product/[slug]'>) {
   const { slug } = await params;
-  const product = products.find((p) => p.slug === slug);
+  const product = await getProduct(slug);
   if (!product) notFound();
 
-  const productReviews = reviews.filter((r) => r.product_slug === product.slug);
-  const related = products
-    .filter((p) => p.id !== product.id && p.category === product.category)
-    .slice(0, 4);
+  const [productReviews, related] = await Promise.all([
+    getProductReviews(product.id, 12),
+    getProductsByCategory(product.category).then((items) =>
+      items.filter((p) => p.id !== product.id).slice(0, 4)
+    ),
+  ]);
 
   const ratingDist = [5, 4, 3, 2, 1].map((star) => {
     const count = productReviews.filter((r) => r.rating === star).length;

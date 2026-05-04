@@ -9,14 +9,16 @@ import { Testimonial } from '@/components/Testimonial';
 import { PressBar } from '@/components/PressBar';
 import { StatsBar } from '@/components/StatsBar';
 import { CTABanner } from '@/components/CTABanner';
-import { products, artists, blogPosts } from '@/lib/seed-data';
+import { getFeaturedProducts, getFeaturedArtists, getPosts } from '@/lib/data';
 
-export default function HomePage() {
-  const featuredProducts = products.filter((p) => p.is_featured).slice(0, 4);
-  const featuredArtists = artists.filter((a) => a.is_featured).slice(0, 3);
-  const latestPosts = [...blogPosts]
-    .sort((a, b) => b.published_at.localeCompare(a.published_at))
-    .slice(0, 3);
+export const revalidate = 600;
+
+export default async function HomePage() {
+  const [featuredProducts, featuredArtists, latestPosts] = await Promise.all([
+    getFeaturedProducts(4),
+    getFeaturedArtists(3),
+    getPosts(3),
+  ]);
 
   return (
     <>

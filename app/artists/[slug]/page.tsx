@@ -2,8 +2,11 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { artists, products } from '@/lib/seed-data';
+import { artists } from '@/lib/seed-data';
+import { getProducts } from '@/lib/data';
 import { ArtistCard } from '@/components/ArtistCard';
+
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   return artists.map((a) => ({ slug: a.slug }));
@@ -29,6 +32,7 @@ export default async function ArtistPage({ params }: PageProps<'/artists/[slug]'
   const artist = artists.find((a) => a.slug === slug);
   if (!artist) notFound();
 
+  const products = await getProducts();
   const stick = products.find((p) => p.stick_size === artist.favourite_stick && !p.subcategory?.includes('stealth'));
   const related = artists.filter((a) => a.id !== artist.id && a.genres.some((g) => artist.genres.includes(g))).slice(0, 4);
 
