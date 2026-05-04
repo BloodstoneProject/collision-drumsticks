@@ -8,7 +8,7 @@ import { formatPrice } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Bundles & Subscriptions',
   description:
-    'Pre-configured drumstick bundles built to hit free shipping. Plus our Subscribe & Save programme — never run out, save 20%.',
+    'Pre-configured drumstick bundles built to hit free shipping. Plus our Subscribe & Save programme - never run out, save 20%.',
 };
 
 export default function BundlesPage() {

@@ -5,12 +5,12 @@ export const metadata = { title: 'Admin Reviews', robots: 'noindex, nofollow' };
 export default function AdminReviews() {
   return (
     <div>
-      <h1 className="font-display heading-md mb-6">Reviews — Pending Approval</h1>
+      <h1 className="font-display heading-md mb-6">Reviews - Pending Approval</h1>
       <div className="space-y-3">
         {reviews.map((r) => (
           <div key={r.id} className="border border-line p-5">
             <div className="flex items-center justify-between mb-2">
-              <p className="font-semibold">{r.customer_name} — {r.rating}★</p>
+              <p className="font-semibold">{r.customer_name} - {r.rating}★</p>
               <p className="text-xs text-mute">{r.created_at}</p>
             </div>
             <p className="font-display text-lg">{r.title}</p>

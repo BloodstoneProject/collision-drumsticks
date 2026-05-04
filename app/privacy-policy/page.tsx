@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         </div>
         <div>
           <h2 className="font-display text-xl text-ink mb-3">What we collect</h2>
-          <p>Order data (name, address, email, phone), payment data (handled by Stripe — we do not store card numbers), newsletter subscribers (email only), endorsement and wholesale enquiries (the data you submit on our forms), and standard analytics (page views, anonymised device info).</p>
+          <p>Order data (name, address, email, phone), payment data (handled by Stripe - we do not store card numbers), newsletter subscribers (email only), endorsement and wholesale enquiries (the data you submit on our forms), and standard analytics (page views, anonymised device info).</p>
         </div>
         <div>
           <h2 className="font-display text-xl text-ink mb-3">Why we collect it</h2>

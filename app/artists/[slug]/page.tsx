@@ -19,7 +19,7 @@ export async function generateMetadata({
   const artist = artists.find((a) => a.slug === slug);
   if (!artist) return {};
   return {
-    title: `${artist.name} — Collision Artist`,
+    title: `${artist.name} - Collision Artist`,
     description: artist.short_bio,
     openGraph: { images: [artist.photo_url] },
   };

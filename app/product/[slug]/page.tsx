@@ -138,9 +138,9 @@ export default async function ProductPage({ params }: PageProps<'/product/[slug]
               <p className="eyebrow mb-3">Specifications</p>
               <dl className="border-t border-line">
                 {[
-                  ['Length', product.length_inches ? `${product.length_inches}"` : '—'],
-                  ['Diameter', product.diameter_inches ? `${product.diameter_inches}"` : '—'],
-                  ['Weight', product.weight_grams ? `${product.weight_grams}g` : '—'],
+                  ['Length', product.length_inches ? `${product.length_inches}"` : '-'],
+                  ['Diameter', product.diameter_inches ? `${product.diameter_inches}"` : '-'],
+                  ['Weight', product.weight_grams ? `${product.weight_grams}g` : '-'],
                   ['Wood', 'American Hickory'],
                   ['Tip', product.tip_type === 'nylon' ? 'Nylon' : 'Wood (oval)'],
                   ['Finish', product.finish === 'stealth-black' ? 'Stealth Black (matte)' : 'Natural oil'],

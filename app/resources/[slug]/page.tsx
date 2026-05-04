@@ -85,11 +85,22 @@ export default async function PostPage({ params }: PageProps<'/resources/[slug]'
     .filter((p) => p.id !== post.id && p.category === post.category)
     .slice(0, 3);
 
+  const FALLBACK: Record<string, string> = {
+    gear: 'https://images.unsplash.com/photo-1606127195898-1cdaf3d5db8a?w=1600&auto=format&fit=crop&q=80',
+    tips: 'https://images.unsplash.com/photo-1571974599782-87624638275a?w=1600&auto=format&fit=crop&q=80',
+    guides: 'https://images.unsplash.com/photo-1485579149621-3123dd979885?w=1600&auto=format&fit=crop&q=80',
+    community: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600&auto=format&fit=crop&q=80',
+    news: 'https://images.unsplash.com/photo-1564544193800-635aaad7a8d3?w=1600&auto=format&fit=crop&q=80',
+    'artist-spotlight':
+      'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600&auto=format&fit=crop&q=80',
+  };
+  const heroImage = post.featured_image || FALLBACK[post.category] || FALLBACK.guides;
+
   const articleLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
-    image: [post.featured_image],
+    image: [heroImage],
     datePublished: post.published_at,
     author: { '@type': 'Person', name: post.author },
     description: post.excerpt,
@@ -113,7 +124,7 @@ export default async function PostPage({ params }: PageProps<'/resources/[slug]'
 
         <div className="container-page mt-10">
           <div className="relative aspect-[16/9] bg-cream">
-            <Image src={post.featured_image} alt={post.title} fill priority sizes="100vw" className="object-cover" />
+            <Image src={heroImage} alt={post.title} fill priority sizes="100vw" className="object-cover" />
           </div>
         </div>
 

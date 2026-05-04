@@ -65,10 +65,10 @@ export function ProductActions({ product }: { product: Product }) {
         data-snipcart-add-item
         data-item-id={variant?.sku}
         data-item-price={unitPrice}
-        data-item-name={`${product.name} — ${variant?.variant_name ?? ''}`}
+        data-item-name={`${product.name} - ${variant?.variant_name ?? ''}`}
         data-item-url={`/product/${product.slug}`}
       >
-        Add to Cart — {formatPrice(total)}
+        Add to Cart - {formatPrice(total)}
       </button>
 
       <label className="flex items-start gap-3 p-4 bg-cream border border-line cursor-pointer">

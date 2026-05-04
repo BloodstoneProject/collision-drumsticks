@@ -14,10 +14,10 @@ export default async function AdminOverview() {
     { label: 'Artists', value: artists.length },
     { label: 'Blog Posts', value: blogPosts.length },
     { label: 'FAQs', value: faqs.length },
-    { label: 'Orders (this month)', value: '—' },
-    { label: 'Revenue (this month)', value: '£—' },
-    { label: 'New endorsement apps', value: '—' },
-    { label: 'Pending reviews', value: '—' },
+    { label: 'Orders (this month)', value: '-' },
+    { label: 'Revenue (this month)', value: '£-' },
+    { label: 'New endorsement apps', value: '-' },
+    { label: 'Pending reviews', value: '-' },
   ];
   return (
     <div>

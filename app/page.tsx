@@ -155,7 +155,7 @@ export default async function HomePage() {
       <CTABanner
         eyebrow="Impact Your Sound"
         title="Find the stick that disappears in your hand."
-        body="Or skip the search and grab a 5A — there is a reason it outsells everything else."
+        body="Or skip the search and grab a 5A - there is a reason it outsells everything else."
         primaryCta={{ label: 'Take the Quiz', href: '/stick-finder' }}
         secondaryCta={{ label: 'Shop the 5A', href: '/product/5a-drumstick' }}
       />

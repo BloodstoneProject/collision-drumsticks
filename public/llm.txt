@@ -32,23 +32,23 @@ Paid community for serious drummers. £34/month, hosted on Kajabi. Content libra
 - HQ: Newcastle, UK
 
 ## Site index
-- / — Homepage
-- /shop — All products
-- /shop/drumsticks — Drumsticks
-- /shop/accessories — Accessories
-- /shop/apparel — Apparel
-- /shop/bundles — Pre-configured bundles
-- /custom — Custom engraving configurator
-- /stick-finder — Interactive stick recommendation quiz
-- /artists — Endorsed artist roster
-- /resources — Blog (gear guides, tips, artist spotlights)
-- /endorsements — Endorsement programme + application
-- /backstage — Membership programme
-- /wholesale — Wholesale + bulk custom enquiries
-- /affiliates — Affiliate programme
-- /about — About Collision and the founder story
-- /how-we-make-our-sticks — Manufacturing transparency
-- /faq — Frequently asked questions
-- /contact — Contact form
+- / - Homepage
+- /shop - All products
+- /shop/drumsticks - Drumsticks
+- /shop/accessories - Accessories
+- /shop/apparel - Apparel
+- /shop/bundles - Pre-configured bundles
+- /custom - Custom engraving configurator
+- /stick-finder - Interactive stick recommendation quiz
+- /artists - Endorsed artist roster
+- /resources - Blog (gear guides, tips, artist spotlights)
+- /endorsements - Endorsement programme + application
+- /backstage - Membership programme
+- /wholesale - Wholesale + bulk custom enquiries
+- /affiliates - Affiliate programme
+- /about - About Collision and the founder story
+- /how-we-make-our-sticks - Manufacturing transparency
+- /faq - Frequently asked questions
+- /contact - Contact form
 
 Last updated: 2026-05-04

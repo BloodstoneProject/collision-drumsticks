@@ -72,7 +72,7 @@ export default function AffiliatesPage() {
       </section>
 
       <CTABanner
-        title="Don’t talk online — but want to play?"
+        title="Don’t talk online - but want to play?"
         body="Apply for an artist endorsement instead."
         primaryCta={{ label: 'Endorsement Application', href: '/endorsements' }}
       />

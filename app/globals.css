@@ -106,7 +106,7 @@
   .text-pretty { text-wrap: pretty; }
 }
 
-/* Hero spotlights — stage-light effect over the dark hero */
+/* Hero spotlights - stage-light effect over the dark hero */
 .hero-stage {
   position: absolute;
   inset: 0;
@@ -168,7 +168,7 @@
   }
 }
 
-/* Light-cone "beams" descending from above — gives stage feel */
+/* Light-cone "beams" descending from above - gives stage feel */
 .hero-beams {
   position: absolute;
   inset: 0;

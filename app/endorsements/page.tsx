@@ -5,7 +5,7 @@ import { EndorsementForm } from './EndorsementForm';
 import { artists, stats } from '@/lib/seed-data';
 
 export const metadata: Metadata = {
-  title: 'Endorsements — Join the Collision Family',
+  title: 'Endorsements - Join the Collision Family',
   description: `${stats.artists}+ artists. 80+ countries. Three tiers, starting at 1,000 followers. Apply to play Collision drumsticks.`,
 };
 
@@ -53,7 +53,7 @@ export default function EndorsementsPage() {
       <PageHero
         eyebrow="Endorsements"
         title="Join the Collision family."
-        subtitle={`${stats.artists}+ artists. ${stats.countries}+ countries. Three tiers — and yes, you can apply at the first one with 1,000 followers.`}
+        subtitle={`${stats.artists}+ artists. ${stats.countries}+ countries. Three tiers - and yes, you can apply at the first one with 1,000 followers.`}
         align="center"
         backgroundImage="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1920&auto=format&fit=crop&q=80"
       />
@@ -93,7 +93,7 @@ export default function EndorsementsPage() {
         </div>
         <p className="mt-10 text-sm text-mute text-center">
           Exceptions considered for exceptional talent. Build a real relationship with the brand
-          first — engage on social, play the sticks, then apply.
+          first - engage on social, play the sticks, then apply.
         </p>
       </section>
 

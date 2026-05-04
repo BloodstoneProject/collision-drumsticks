@@ -6,44 +6,44 @@ import { CTABanner } from '@/components/CTABanner';
 export const metadata: Metadata = {
   title: 'How We Make Our Drumsticks',
   description:
-    'From a 60-foot tree in Tennessee to a stick in your hand. The full Collision Drumsticks manufacturing process — wood sourcing, turning, weight-matching, finishing.',
+    'From a 60-foot tree in Tennessee to a stick in your hand. The full Collision Drumsticks manufacturing process - wood sourcing, turning, weight-matching, finishing.',
 };
 
 const STEPS = [
   {
     n: '01',
     title: 'Sourcing',
-    body: 'Every Collision stick starts as a slab of grade-A American Hickory in Tennessee. We have used the same supplier since 2018 — we know which forest each shipment came from.',
+    body: 'Every Collision stick starts as a slab of grade-A American Hickory in Tennessee. We have used the same supplier since 2018 - we know which forest each shipment came from.',
     image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&auto=format&fit=crop&q=80',
   },
   {
     n: '02',
     title: 'Cutting',
-    body: 'Slabs are cut into 18" billets, sorted by grain pattern. Anything with a visible knot or cross-grain is rejected. We reject 35% of incoming wood — it does not enter our line.',
+    body: 'Slabs are cut into 18" billets, sorted by grain pattern. Anything with a visible knot or cross-grain is rejected. We reject 35% of incoming wood - it does not enter our line.',
     image: 'https://images.unsplash.com/photo-1611464908623-07b2bcb2080b?w=1600&auto=format&fit=crop&q=80',
   },
   {
     n: '03',
     title: 'Turning',
-    body: 'Billets are CNC-turned to a rough shape, then handed to a final-finish operator who takes them to size — diameter, taper, and tip — by hand on a precision lathe.',
+    body: 'Billets are CNC-turned to a rough shape, then handed to a final-finish operator who takes them to size - diameter, taper, and tip - by hand on a precision lathe.',
     image: 'https://images.unsplash.com/photo-1581782906856-a37f78ddca56?w=1600&auto=format&fit=crop&q=80',
   },
   {
     n: '04',
     title: 'Weight matching',
-    body: 'Every stick is individually weighed. Pairs are matched to within ±1 gram. We then pitch-test on a steel block — if the pair does not ring at the same pitch, we re-match.',
+    body: 'Every stick is individually weighed. Pairs are matched to within ±1 gram. We then pitch-test on a steel block - if the pair does not ring at the same pitch, we re-match.',
     image: 'https://fqgrunquyoseksvrpvsg.supabase.co/storage/v1/object/public/product-images/6c34eba613c0.jpg',
   },
   {
     n: '05',
     title: 'Finishing',
-    body: 'Natural sticks get an oil finish. Stealth Black sticks get three thin matte coats, baked between layers. Custom sticks are laser-engraved at this stage — up to 4cm × 1.5cm.',
+    body: 'Natural sticks get an oil finish. Stealth Black sticks get three thin matte coats, baked between layers. Custom sticks are laser-engraved at this stage - up to 4cm × 1.5cm.',
     image: 'https://fqgrunquyoseksvrpvsg.supabase.co/storage/v1/object/public/product-images/5eb743dbe667.png',
   },
   {
     n: '06',
     title: 'Quality control',
-    body: 'Every pair is hand-inspected, bend-tested, and bagged. Pairs that fail any check go in the reject bin — there is no second-tier line.',
+    body: 'Every pair is hand-inspected, bend-tested, and bagged. Pairs that fail any check go in the reject bin - there is no second-tier line.',
     image: 'https://fqgrunquyoseksvrpvsg.supabase.co/storage/v1/object/public/product-images/3994dda808d6.jpg',
   },
 ];

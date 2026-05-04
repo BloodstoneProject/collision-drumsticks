@@ -13,7 +13,7 @@ export const products: Product[] = [
     subcategory: 'wood-tip',
     short_description: 'The all-rounder. Premium American Hickory, oval tip, balanced for any genre.',
     description:
-      'Our most popular stick. Built from grade-A American Hickory and weight-matched in Newcastle. The 5A is the workhorse — light enough for jazz, rugged enough for rock, neutral enough to teach with. If you only own one pair of Collision sticks, make it this one.',
+      'Our most popular stick. Built from grade-A American Hickory and weight-matched in Newcastle. The 5A is the workhorse - light enough for jazz, rugged enough for rock, neutral enough to teach with. If you only own one pair of Collision sticks, make it this one.',
     base_price_gbp: 14.99,
     primary_image: stickImg('1519892300165-cb5542fb47c7'),
     images: [stickImg('1519892300165-cb5542fb47c7'), stickImg('1571974599782-87624638275a')],
@@ -73,7 +73,7 @@ export const products: Product[] = [
     subcategory: 'reach-series',
     short_description: 'A 5A with extended reach. For drummers who play wider kits.',
     description:
-      'The Reach series adds half an inch to a standard 5A — small change, big difference. The extra length helps players with bigger kits, lower stools, or simply longer arms. Same balance and weight-match as the standard 5A.',
+      'The Reach series adds half an inch to a standard 5A - small change, big difference. The extra length helps players with bigger kits, lower stools, or simply longer arms. Same balance and weight-match as the standard 5A.',
     base_price_gbp: 15.99,
     primary_image: stickImg('1606127195898-1cdaf3d5db8a'),
     images: [stickImg('1606127195898-1cdaf3d5db8a')],
@@ -128,7 +128,7 @@ export const products: Product[] = [
     subcategory: 'wood-tip',
     short_description: 'A lighter, slimmer stick. Built for jazz, light pop, and dynamic players.',
     description:
-      'The 7A is the smallest stick in our lineup. Lighter, slimmer, and quicker. Sized for nuance — jazz brushes-and-sticks players, kids learning, anyone who wants more articulation than power.',
+      'The 7A is the smallest stick in our lineup. Lighter, slimmer, and quicker. Sized for nuance - jazz brushes-and-sticks players, kids learning, anyone who wants more articulation than power.',
     base_price_gbp: 14.99,
     primary_image: stickImg('1519892300165-cb5542fb47c7'),
     images: [stickImg('1519892300165-cb5542fb47c7')],
@@ -181,7 +181,7 @@ export const products: Product[] = [
     subcategory: 'wood-tip',
     short_description: 'The heavy hitter. Maximum weight, maximum durability.',
     description:
-      "Our biggest stick. The 2B is for marching, metal, hard rock, and players who break sticks faster than they can buy them. Don't expect finesse — expect to last.",
+      "Our biggest stick. The 2B is for marching, metal, hard rock, and players who break sticks faster than they can buy them. Don't expect finesse - expect to last.",
     base_price_gbp: 15.99,
     primary_image: stickImg('1571974599782-87624638275a'),
     images: [stickImg('1571974599782-87624638275a')],
@@ -332,7 +332,7 @@ export const products: Product[] = [
     subcategory: 'practice',
     short_description: 'Realistic rebound practice pad. Quiet, fast, travel-ready.',
     description:
-      'Two-sided 8-inch pad — soft side for quiet practice, harder side for rebound work. Threaded mount fits any cymbal stand.',
+      'Two-sided 8-inch pad - soft side for quiet practice, harder side for rebound work. Threaded mount fits any cymbal stand.',
     base_price_gbp: 29.99,
     primary_image: stickImg('1564544193800-635aaad7a8d3'),
     images: [stickImg('1564544193800-635aaad7a8d3')],
@@ -503,7 +503,7 @@ export const artists: Artist[] = [
     instagram_followers: 145000,
     favourite_stick: '5A',
     testimonial_quote:
-      'These are the only sticks I take on the road. The weight match is unreal — every pair feels the same.',
+      'These are the only sticks I take on the road. The weight match is unreal - every pair feels the same.',
     is_featured: true,
     joined_year: 2024,
   },
@@ -512,7 +512,7 @@ export const artists: Artist[] = [
     name: 'Devontae Brooks',
     slug: 'devontae-brooks',
     short_bio: 'Atlanta gospel chops player. The reach series fan.',
-    bio: 'Devontae has built a 200K-strong following posting gospel chops covers from his Atlanta home studio. His favourite is the 5AR — “the extra reach is the difference between hitting the ride and missing it.”',
+    bio: 'Devontae has built a 200K-strong following posting gospel chops covers from his Atlanta home studio. His favourite is the 5AR - “the extra reach is the difference between hitting the ride and missing it.”',
     photo_url: `${IMG}1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop&q=80`,
     endorsement_tier: 'impact',
     genres: ['Gospel', 'R&B', 'Funk'],
@@ -565,7 +565,7 @@ export const artists: Artist[] = [
     name: 'Marcus Reid',
     slug: 'marcus-reid',
     short_bio: 'Glasgow indie band drummer. 5B Stealth player.',
-    bio: 'Marcus is the drummer for one of Scotland’s most-streamed indie acts. The 5B Stealth is his weapon — “I hit hard and I want a stick that does not look beat up after one set.”',
+    bio: 'Marcus is the drummer for one of Scotland’s most-streamed indie acts. The 5B Stealth is his weapon - “I hit hard and I want a stick that does not look beat up after one set.”',
     photo_url: `${IMG}1542178243-bc20204b769f?w=600&auto=format&fit=crop&q=80`,
     endorsement_tier: 'cruise',
     genres: ['Indie', 'Rock'],
@@ -705,12 +705,12 @@ export const blogPosts: BlogPost[] = [
     slug: '5a-vs-5b-which-drumstick-is-right-for-you',
     title: '5A vs 5B: Which Drumstick is Right for You?',
     excerpt:
-      'The difference between the two most popular drumstick sizes — and how to pick the one that fits your playing.',
+      'The difference between the two most popular drumstick sizes - and how to pick the one that fits your playing.',
     content: `The 5A and 5B are the two most-played drumstick sizes on the planet. They are both 16 inches long. They are both made of American Hickory in our standard line. The difference, despite the small numerical change, matters more than most beginners realise.
 
 ## The numbers
 
-The 5A measures 0.565 inches in diameter. The 5B measures 0.595 inches. That is three-hundredths of an inch — a difference smaller than most people can detect by sight. Pick them up and the difference is obvious. The 5A weighs around 47 grams. The 5B weighs around 53 grams.
+The 5A measures 0.565 inches in diameter. The 5B measures 0.595 inches. That is three-hundredths of an inch - a difference smaller than most people can detect by sight. Pick them up and the difference is obvious. The 5A weighs around 47 grams. The 5B weighs around 53 grams.
 
 ## Who plays a 5A
 
@@ -718,11 +718,11 @@ Most drummers, most of the time. The 5A is the most-sold stick in the world for 
 
 ## Who plays a 5B
 
-Drummers who play harder, louder, or longer. Hard rock players. Metal players who do not want to commit to a 2B. Drummers who break 5As before they wear them out — that is a sign you should be on a 5B. The 5B has more body, more stiffness, and more durability under heavy backbeats.
+Drummers who play harder, louder, or longer. Hard rock players. Metal players who do not want to commit to a 2B. Drummers who break 5As before they wear them out - that is a sign you should be on a 5B. The 5B has more body, more stiffness, and more durability under heavy backbeats.
 
 ## What to actually do
 
-Buy a pair of each. Play them for a week. The right stick is the one you do not think about — the one that disappears in your hand. If both feel right, default to the 5A. If the 5A feels too light, you are a 5B player. If the 5B feels clubby, you are a 5A player.
+Buy a pair of each. Play them for a week. The right stick is the one you do not think about - the one that disappears in your hand. If both feel right, default to the 5A. If the 5A feels too light, you are a 5B player. If the 5B feels clubby, you are a 5A player.
 
 If you want our help, our [Stick Finder quiz](/stick-finder) is the fastest way to a recommendation.
 `,
@@ -743,11 +743,11 @@ If you want our help, our [Stick Finder quiz](/stick-finder) is the fastest way 
 
 ## Wood tips
 
-Warmer attack on cymbals. Slightly darker bell tone. Wears down with use, but the tone stays consistent until it does. Wood tip is the default — most pros, most genres, most of the time.
+Warmer attack on cymbals. Slightly darker bell tone. Wears down with use, but the tone stays consistent until it does. Wood tip is the default - most pros, most genres, most of the time.
 
 ## Nylon tips
 
-Brighter cymbal definition. Crisper articulation, especially on hi-hat tip work. The nylon tip itself outlasts a wood tip by 3–5x. The downside: when the nylon does eventually crack, the stick is done — there is no “sanding it back.”
+Brighter cymbal definition. Crisper articulation, especially on hi-hat tip work. The nylon tip itself outlasts a wood tip by 3–5x. The downside: when the nylon does eventually crack, the stick is done - there is no “sanding it back.”
 
 ## When to choose nylon
 
@@ -776,19 +776,19 @@ We make every stick model in both wood and nylon. The choice is preference, not 
 
 ## Grade-A only
 
-We reject around 35% of the hickory we receive at the workshop. We do not use it. We do not sell it. The bar for our standard line is the bar — there is no “seconds” tier we slip into the box. Grade-A or it goes back.
+We reject around 35% of the hickory we receive at the workshop. We do not use it. We do not sell it. The bar for our standard line is the bar - there is no “seconds” tier we slip into the box. Grade-A or it goes back.
 
 ## Turning
 
-The slab is cut into 18-inch billets, then dowel-turned to a rough shape on CNC lathes. The rough shapes are then handed to a final-finish lathe operator who takes them to size — diameter, taper, and tip — by hand.
+The slab is cut into 18-inch billets, then dowel-turned to a rough shape on CNC lathes. The rough shapes are then handed to a final-finish lathe operator who takes them to size - diameter, taper, and tip - by hand.
 
 ## Weight matching
 
-This is where Collision differs from most studio brands. After turning, every stick is weighed individually. Sticks are paired only with another stick within ±1 gram. We then pitch-match — a quick tap on a steel block tells us if the pitch is consistent, and we re-pair if it is not. The pair is then bound and inspected.
+This is where Collision differs from most studio brands. After turning, every stick is weighed individually. Sticks are paired only with another stick within ±1 gram. We then pitch-match - a quick tap on a steel block tells us if the pitch is consistent, and we re-pair if it is not. The pair is then bound and inspected.
 
 ## Finishing
 
-Natural sticks get a thin oil finish — enough to protect the wood, not so much that grip suffers. Stealth Black sticks get a matte black coating applied in three thin layers, baked between coats. Custom engraved sticks get laser-engraved up to 4cm × 1.5cm on the shaft.
+Natural sticks get a thin oil finish - enough to protect the wood, not so much that grip suffers. Stealth Black sticks get a matte black coating applied in three thin layers, baked between coats. Custom engraved sticks get laser-engraved up to 4cm × 1.5cm on the shaft.
 
 ## Quality control
 
@@ -816,7 +816,7 @@ A loose, fulcrum-anchored grip lets the stick do its work. A tight grip stops th
 
 ## 2. You hit cymbals with the shoulder, not the bead
 
-Cymbals are designed to be played with the shoulder of the stick (the taper just below the tip), not the tip itself. Hitting with the tip will eat the tip. Watch your favourite drummer — they hit the cymbal with the side, not the head.
+Cymbals are designed to be played with the shoulder of the stick (the taper just below the tip), not the tip itself. Hitting with the tip will eat the tip. Watch your favourite drummer - they hit the cymbal with the side, not the head.
 
 ## 3. You are storing them in the bag
 
@@ -847,7 +847,7 @@ A studio meeting in Camden, mid-2024. The MD of the session pulled out a pair of
 
 ## Why the 5A specifically?
 
-I have small hands. The 5A is the heaviest stick I can play comfortably for two hours. The 5B feels clubby in my grip. The 7A is too light for the gig I do. The 5A is the Goldilocks zone for me — and I think for most session players, honestly.
+I have small hands. The 5A is the heaviest stick I can play comfortably for two hours. The 5B feels clubby in my grip. The 7A is too light for the gig I do. The 5A is the Goldilocks zone for me - and I think for most session players, honestly.
 
 ## What does your stick rotation look like on tour?
 
@@ -855,7 +855,7 @@ Three pairs per show. One in the holder, one as a backup, one for the encore. Af
 
 ## What do you tell drummers who ask about endorsements?
 
-Apply. Even if you do not think you have the following. Collision’s tier system means they take real players seriously, not just touring acts. The Cruise tier is genuine — I know players who started there and grew into Approach.
+Apply. Even if you do not think you have the following. Collision’s tier system means they take real players seriously, not just touring acts. The Cruise tier is genuine - I know players who started there and grew into Approach.
 
 Maya plays Collision 5As exclusively. [Read her artist profile](/artists/maya-holloway).
 `,
@@ -879,11 +879,11 @@ Every stick has a print area of 4cm × 1.5cm on the shaft. That is small. Design
 
 ## File formats
 
-We accept SVG, PDF, PNG, and JPG. SVG is best — it scales without artefacts. If you only have a PNG, send the highest resolution you have.
+We accept SVG, PDF, PNG, and JPG. SVG is best - it scales without artefacts. If you only have a PNG, send the highest resolution you have.
 
 ## Production time
 
-Custom sticks are made to order. Production is 7–10 business days, then standard shipping. We do not offer rush orders on custom sticks — quality control on engraved batches takes longer.
+Custom sticks are made to order. Production is 7–10 business days, then standard shipping. We do not offer rush orders on custom sticks - quality control on engraved batches takes longer.
 
 ## What we cannot engrave
 
@@ -943,7 +943,7 @@ export const faqs: FAQ[] = [
     sort_order: 3,
     question: 'Do you offer left-handed sticks?',
     answer:
-      'Drumsticks are not handed — they are symmetrical. Any stick works for right- or left-handed players.',
+      'Drumsticks are not handed - they are symmetrical. Any stick works for right- or left-handed players.',
   },
   {
     id: 'f6',
@@ -973,7 +973,7 @@ export const faqs: FAQ[] = [
     sort_order: 3,
     question: 'Do you ship internationally?',
     answer:
-      'Yes. We ship worldwide via transglobal couriers. Delivery times vary by country — typically 7–14 business days for Europe, 10–21 for the rest of the world.',
+      'Yes. We ship worldwide via transglobal couriers. Delivery times vary by country - typically 7–14 business days for Europe, 10–21 for the rest of the world.',
   },
   {
     id: 'f10',
@@ -996,7 +996,7 @@ export const faqs: FAQ[] = [
     sort_order: 2,
     question: 'What can I engrave?',
     answer:
-      'Up to 4cm × 1.5cm of artwork — your name, band logo, monogram, or design. We accept SVG, PDF, PNG, and JPG. We cannot engrave trademarked third-party artwork.',
+      'Up to 4cm × 1.5cm of artwork - your name, band logo, monogram, or design. We accept SVG, PDF, PNG, and JPG. We cannot engrave trademarked third-party artwork.',
   },
   {
     id: 'f13',
@@ -1004,7 +1004,7 @@ export const faqs: FAQ[] = [
     sort_order: 3,
     question: 'Can I order more than 12 pairs custom?',
     answer:
-      'Yes — see our [100 Pairs Custom](/wholesale) offer for bulk custom orders with extended discount.',
+      'Yes - see our [100 Pairs Custom](/wholesale) offer for bulk custom orders with extended discount.',
   },
   {
     id: 'f14',
@@ -1012,7 +1012,7 @@ export const faqs: FAQ[] = [
     sort_order: 1,
     question: 'How do I apply for an endorsement?',
     answer:
-      'Through our [Endorsements page](/endorsements). We have three tiers — Cruise (1K+ followers), Approach (10K+), and Impact (100K+). Applications are reviewed within 7 days.',
+      'Through our [Endorsements page](/endorsements). We have three tiers - Cruise (1K+ followers), Approach (10K+), and Impact (100K+). Applications are reviewed within 7 days.',
   },
   {
     id: 'f15',
@@ -1060,7 +1060,7 @@ export const faqs: FAQ[] = [
     sort_order: 2,
     question: 'How do I join Backstage?',
     answer:
-      'Through the [Backstage page](/backstage). Enrolment is open in waves — when doors are closed, join the waitlist.',
+      'Through the [Backstage page](/backstage). Enrolment is open in waves - when doors are closed, join the waitlist.',
   },
 ];
 
@@ -1111,7 +1111,7 @@ export const reviews: Review[] = [
     customer_name: 'Marco V.',
     rating: 5,
     title: 'Engraving is sharp',
-    body: 'Got my band logo on a 6 pack of 5As. Looks better than I expected — sharper and cleaner. Will reorder.',
+    body: 'Got my band logo on a 6 pack of 5As. Looks better than I expected - sharper and cleaner. Will reorder.',
     is_verified_purchase: true,
     created_at: '2026-02-25',
   },

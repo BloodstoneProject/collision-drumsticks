@@ -7,7 +7,7 @@ export default function AdminSettings() {
       <div className="space-y-6 max-w-xl">
         <div>
           <label className="label-field">Announcement bar text</label>
-          <input className="input-field" defaultValue="Free UK Shipping over £49 — Worldwide Shipping Available" />
+          <input className="input-field" defaultValue="Free UK Shipping over £49 - Worldwide Shipping Available" />
         </div>
         <div>
           <label className="label-field">Free shipping threshold (GBP)</label>

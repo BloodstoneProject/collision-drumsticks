@@ -31,9 +31,9 @@ export default function ShippingPage() {
             paid by the recipient.
           </p>
           <ul className="mt-4 space-y-2 text-sm">
-            <li className="flex justify-between border-b border-line pb-2"><span>Europe — 7–14 days</span><strong>From £9.99</strong></li>
-            <li className="flex justify-between border-b border-line pb-2"><span>USA / Canada — 10–14 days</span><strong>From £14.99</strong></li>
-            <li className="flex justify-between border-b border-line pb-2"><span>Rest of world — 10–21 days</span><strong>From £19.99</strong></li>
+            <li className="flex justify-between border-b border-line pb-2"><span>Europe - 7–14 days</span><strong>From £9.99</strong></li>
+            <li className="flex justify-between border-b border-line pb-2"><span>USA / Canada - 10–14 days</span><strong>From £14.99</strong></li>
+            <li className="flex justify-between border-b border-line pb-2"><span>Rest of world - 10–21 days</span><strong>From £19.99</strong></li>
           </ul>
         </div>
 

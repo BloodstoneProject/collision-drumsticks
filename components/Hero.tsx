@@ -20,7 +20,7 @@ export function Hero() {
         />
       </div>
 
-      {/* Stage lighting — warm key + crimson rim + bottom haze */}
+      {/* Stage lighting - warm key + crimson rim + bottom haze */}
       <div className="hero-stage" aria-hidden="true">
         <div className="spot" />
       </div>

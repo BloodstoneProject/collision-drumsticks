@@ -21,8 +21,8 @@ const bebas = Bebas_Neue({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.collisiondrumsticks.com'),
   title: {
-    default: 'Collision Drumsticks — Impact Your Sound',
-    template: '%s — Collision Drumsticks',
+    default: 'Collision Drumsticks - Impact Your Sound',
+    template: '%s - Collision Drumsticks',
   },
   description:
     'Premium American Hickory drumsticks, crafted for durability. Trusted by 10,000+ drummers worldwide. Free UK shipping over £49.',

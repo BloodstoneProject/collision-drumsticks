@@ -28,7 +28,7 @@ export default function AdminArtists() {
                 <td className="p-3 font-medium">{a.name}</td>
                 <td className="p-3 capitalize">{a.endorsement_tier}</td>
                 <td className="p-3 text-mute">{a.country}</td>
-                <td className="p-3">{a.instagram_followers?.toLocaleString() ?? '—'}</td>
+                <td className="p-3">{a.instagram_followers?.toLocaleString() ?? '-'}</td>
                 <td className="p-3">{a.favourite_stick}</td>
                 <td className="p-3 text-right">
                   <Link href={`/artists/${a.slug}`} className="text-xs underline mr-3">View</Link>

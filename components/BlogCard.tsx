@@ -3,6 +3,16 @@ import Link from 'next/link';
 import { format } from 'date-fns';
 import type { BlogPost } from '@/lib/types';
 
+const FALLBACKS: Record<string, string> = {
+  gear: 'https://images.unsplash.com/photo-1606127195898-1cdaf3d5db8a?w=1400&auto=format&fit=crop&q=80',
+  tips: 'https://images.unsplash.com/photo-1571974599782-87624638275a?w=1400&auto=format&fit=crop&q=80',
+  guides: 'https://images.unsplash.com/photo-1485579149621-3123dd979885?w=1400&auto=format&fit=crop&q=80',
+  community: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1400&auto=format&fit=crop&q=80',
+  news: 'https://images.unsplash.com/photo-1564544193800-635aaad7a8d3?w=1400&auto=format&fit=crop&q=80',
+  'artist-spotlight':
+    'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1400&auto=format&fit=crop&q=80',
+};
+
 export function BlogCard({
   post,
   size = 'default',
@@ -11,6 +21,7 @@ export function BlogCard({
   size?: 'default' | 'large';
 }) {
   const aspect = size === 'large' ? 'aspect-[16/9]' : 'aspect-[4/3]';
+  const src = post.featured_image || FALLBACKS[post.category] || FALLBACKS.guides;
   return (
     <Link
       href={`/resources/${post.slug}`}
@@ -18,7 +29,7 @@ export function BlogCard({
     >
       <div className={`relative ${aspect} overflow-hidden bg-cream`}>
         <Image
-          src={post.featured_image}
+          src={src}
           alt={post.title}
           fill
           sizes={size === 'large' ? '100vw' : '(max-width: 768px) 100vw, 33vw'}

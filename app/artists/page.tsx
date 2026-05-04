@@ -4,8 +4,8 @@ import { ArtistCard } from '@/components/ArtistCard';
 import { artists, stats } from '@/lib/seed-data';
 
 export const metadata: Metadata = {
-  title: 'The Collision Family — Endorsed Artists',
-  description: `${stats.artists}+ endorsed artists across ${stats.countries}+ countries. Pop, rock, jazz, gospel, metal — find the players who play Collision.`,
+  title: 'The Collision Family - Endorsed Artists',
+  description: `${stats.artists}+ endorsed artists across ${stats.countries}+ countries. Pop, rock, jazz, gospel, metal - find the players who play Collision.`,
 };
 
 export default function ArtistsPage() {

@@ -35,7 +35,7 @@ export default function AboutPage() {
             Carlton spent fifteen years gigging before he got tired of buying bad sticks.
           </h2>
           <p className="mt-6 text-mute text-pretty">
-            Collision was started in 2014 by Carlton Banks — a working drummer with a drumkit, a CNC
+            Collision was started in 2014 by Carlton Banks - a working drummer with a drumkit, a CNC
             lathe, and a problem. Every box of sticks he bought had at least one warped pair, and
             none of the brands available in the UK were weight-matching to a standard he was happy
             to play with.

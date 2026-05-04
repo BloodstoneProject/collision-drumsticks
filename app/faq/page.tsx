@@ -7,7 +7,7 @@ export const revalidate = 600;
 export const metadata: Metadata = {
   title: 'FAQ',
   description:
-    'Frequently asked questions about Collision Drumsticks — products, shipping, custom orders, endorsements, wholesale, and Backstage.',
+    'Frequently asked questions about Collision Drumsticks - products, shipping, custom orders, endorsements, wholesale, and Backstage.',
 };
 
 const CATEGORIES = [
@@ -38,7 +38,7 @@ export default async function FAQPage() {
       <PageHero
         eyebrow="FAQ"
         title="Questions, answered."
-        subtitle="Cannot find what you are looking for? Email sales@collisiondrumsticks.com — we reply within one business day."
+        subtitle="Cannot find what you are looking for? Email sales@collisiondrumsticks.com - we reply within one business day."
       />
       <section className="container-page py-12 md:py-16 max-w-4xl">
         {CATEGORIES.map((cat) => {

@@ -6,7 +6,7 @@ import { getProductsByCategory } from '@/lib/data';
 
 export const revalidate = 600;
 export const metadata: Metadata = {
-  title: 'Drumsticks — American Hickory',
+  title: 'Drumsticks - American Hickory',
   description:
     'Every Collision drumstick model: 5A, 5B, 5AR Reach, 5BR Reach, 7A, 7AR, 2B. Wood and nylon tip. Natural and Stealth Black. Weight-matched in Newcastle.',
 };

@@ -176,7 +176,7 @@ export function BeatSequencer() {
       </div>
 
       <p className="mt-5 text-[0.62rem] uppercase tracking-[0.16em] text-bone/40">
-        {audioOn ? 'Sound on — click any cell.' : 'Tap the speaker to hear it.'}
+        {audioOn ? 'Sound on - click any cell.' : 'Tap the speaker to hear it.'}
       </p>
     </div>
   );

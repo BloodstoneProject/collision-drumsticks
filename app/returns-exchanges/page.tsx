@@ -42,7 +42,7 @@ export default function ReturnsPage() {
         <div>
           <h2 className="font-display heading-sm mb-3">Exchanges</h2>
           <p className="text-mute">
-            We do not process direct exchanges — return for a refund and place a new order. This
+            We do not process direct exchanges - return for a refund and place a new order. This
             way you receive the new product faster than waiting for the exchange to clear.
           </p>
         </div>

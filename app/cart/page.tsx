@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default async function CartPage() {
   const products = await getProducts();
-  // Placeholder cart — Snipcart will replace this with a server-rendered cart
+  // Placeholder cart - Snipcart will replace this with a server-rendered cart
   const cart = [
     { product: products[0], quantity: 1, variant: products[0]?.variants[0] },
     { product: products[7], quantity: 1, variant: products[7]?.variants[0] },

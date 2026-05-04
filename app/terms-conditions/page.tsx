@@ -30,7 +30,7 @@ export default function TermsPage() {
         </div>
         <div>
           <h2 className="font-display text-xl text-ink mb-3">Liability</h2>
-          <p>Our liability is limited to the value of the order. Drumsticks are consumables — wear and breakage during normal play are not faults.</p>
+          <p>Our liability is limited to the value of the order. Drumsticks are consumables - wear and breakage during normal play are not faults.</p>
         </div>
         <div>
           <h2 className="font-display text-xl text-ink mb-3">Governing law</h2>

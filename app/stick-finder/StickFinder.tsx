@@ -62,8 +62,8 @@ const QUESTIONS: Array<{
     key: 'reach',
     prompt: 'Standard length or extended reach?',
     options: [
-      { value: 'standard', label: 'Standard length', hint: '16" — works for most kits.' },
-      { value: 'reach', label: 'Extended reach', hint: '+½" — for bigger kits, lower stools, longer arms.' },
+      { value: 'standard', label: 'Standard length', hint: '16" - works for most kits.' },
+      { value: 'reach', label: 'Extended reach', hint: '+½" - for bigger kits, lower stools, longer arms.' },
       { value: 'either', label: 'Either is fine' },
     ],
   },
@@ -80,8 +80,8 @@ const QUESTIONS: Array<{
     key: 'finish',
     prompt: 'Stage look matter to you?',
     options: [
-      { value: 'natural', label: 'Natural — classic look' },
-      { value: 'stealth', label: 'Stealth Black — matte black coating' },
+      { value: 'natural', label: 'Natural - classic look' },
+      { value: 'stealth', label: 'Stealth Black - matte black coating' },
       { value: 'custom', label: 'Custom engraved with my logo' },
     ],
   },

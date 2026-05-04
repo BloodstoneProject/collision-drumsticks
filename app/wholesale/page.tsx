@@ -5,7 +5,7 @@ import { WholesaleForm } from './WholesaleForm';
 export const metadata: Metadata = {
   title: 'Wholesale & Bulk Custom',
   description:
-    'Stock Collision in your store. Plus our 100 Pairs Custom programme — bulk-engraved sticks for music schools, bands, and brands.',
+    'Stock Collision in your store. Plus our 100 Pairs Custom programme - bulk-engraved sticks for music schools, bands, and brands.',
 };
 
 export default function WholesalePage() {
@@ -49,7 +49,7 @@ export default function WholesalePage() {
                 'Up to 4cm × 1.5cm engraving',
                 '14–21 day production',
                 'Shipped worldwide',
-                'Volume pricing scales — ask for a quote',
+                'Volume pricing scales - ask for a quote',
               ].map((b) => (
                 <li key={b} className="flex gap-2">
                   <span className="text-crimson">✓</span>

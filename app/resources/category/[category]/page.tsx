@@ -17,7 +17,7 @@ export async function generateMetadata({
 }: PageProps<'/resources/category/[category]'>): Promise<Metadata> {
   const { category } = await params;
   return {
-    title: `${category.replace('-', ' ')} — Resources`,
+    title: `${category.replace('-', ' ')} - Resources`,
     description: `${category.replace('-', ' ')} posts from Collision Drumsticks.`,
   };
 }

@@ -222,7 +222,7 @@ export async function getFAQs(): Promise<FAQ[]> {
   }));
 }
 
-// Artists are not in WordPress — keep them in seed-data for now.
+// Artists are not in WordPress - keep them in seed-data for now.
 export async function getArtists(): Promise<Artist[]> {
   return seed.artists;
 }
