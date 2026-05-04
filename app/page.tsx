@@ -1,65 +1,148 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { Hero } from '@/components/Hero';
+import { TrustBar } from '@/components/TrustBar';
+import { ProductCard } from '@/components/ProductCard';
+import { ArtistCard } from '@/components/ArtistCard';
+import { BlogCard } from '@/components/BlogCard';
+import { SectionHeader } from '@/components/SectionHeader';
+import { Testimonial } from '@/components/Testimonial';
+import { PressBar } from '@/components/PressBar';
+import { StatsBar } from '@/components/StatsBar';
+import { CTABanner } from '@/components/CTABanner';
+import { products, artists, blogPosts } from '@/lib/seed-data';
 
-export default function Home() {
+export default function HomePage() {
+  const featuredProducts = products.filter((p) => p.is_featured).slice(0, 4);
+  const featuredArtists = artists.filter((a) => a.is_featured).slice(0, 3);
+  const latestPosts = [...blogPosts]
+    .sort((a, b) => b.published_at.localeCompare(a.published_at))
+    .slice(0, 3);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      <Hero />
+      <TrustBar />
+
+      <section className="container-page py-20 md:py-28">
+        <SectionHeader
+          eyebrow="Best Sellers"
+          title="The sticks that built our reputation."
+          cta={{ label: 'Shop All Drumsticks', href: '/shop/drumsticks' }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          {featuredProducts.map((p, i) => (
+            <ProductCard key={p.id} product={p} eager={i < 2} />
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="bg-cream">
+        <div className="container-page py-20 md:py-28 grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <p className="eyebrow mb-3">Stick Finder</p>
+            <h2 className="font-display heading-lg text-balance">
+              Not sure which stick is right for you?
+            </h2>
+            <p className="mt-4 text-mute max-w-md text-pretty">
+              Our 60-second quiz cross-references your genre, style, and experience against every
+              stick we make. By the end you will know exactly which to play.
+            </p>
+            <div className="mt-8">
+              <Link href="/stick-finder" className="btn-primary">
+                Take the 60-Second Quiz
+              </Link>
+            </div>
+          </div>
+          <div className="aspect-[4/3] bg-ink/5 border border-line flex items-center justify-center">
+            <p className="font-display text-7xl text-mute opacity-30">5A · 5B · 7A · 2B</p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <PressBar />
+
+      <section className="container-page py-20 md:py-28">
+        <SectionHeader
+          eyebrow="The Family"
+          title="What our artists say."
+          cta={{ label: 'Meet the Roster', href: '/artists' }}
+        />
+        <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+          {featuredArtists.map((a) => (
+            <Testimonial key={a.id} artist={a} />
+          ))}
+        </div>
+      </section>
+
+      <section className="container-page py-20 md:py-28 border-t border-line">
+        <SectionHeader
+          eyebrow="Built By Artists"
+          title="For the artist."
+        />
+        <div className="grid md:grid-cols-3 gap-10">
+          {[
+            {
+              title: 'Community',
+              body: 'Started by a working drummer in Newcastle. Endorsement tiers anyone with a kit and a following can apply to.',
+            },
+            {
+              title: 'Quality',
+              body: 'Grade-A American Hickory, weight-matched to ±1g, finished by hand. The other 35% does not leave the shop.',
+            },
+            {
+              title: 'Transparency',
+              body: 'We tell you where the wood is from, how the sticks are made, and what we charge. No hidden margin.',
+            },
+          ].map((pillar) => (
+            <div key={pillar.title} className="border-t border-ink pt-6">
+              <p className="font-display text-2xl">{pillar.title}</p>
+              <p className="text-mute mt-3 text-pretty">{pillar.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-page py-20 md:py-28 bg-cream -mx-5 md:-mx-8 lg:-mx-12 px-5 md:px-8 lg:px-12">
+        <SectionHeader
+          eyebrow="Featured Artist"
+          title="This week on the kit."
+          cta={{ label: 'Full Profile', href: `/artists/${featuredArtists[0]?.slug ?? ''}` }}
+        />
+        {featuredArtists[0] && (
+          <div className="grid md:grid-cols-3 gap-6">
+            <ArtistCard artist={featuredArtists[0]} />
+            <div className="md:col-span-2 flex flex-col justify-center">
+              <p className="font-display heading-md text-balance">
+                “{featuredArtists[0].testimonial_quote}”
+              </p>
+              <p className="mt-6 text-mute text-pretty">{featuredArtists[0].bio}</p>
+            </div>
+          </div>
+        )}
+      </section>
+
+      <section className="container-page py-20 md:py-28">
+        <SectionHeader
+          eyebrow="From the Blog"
+          title="Resources for drummers."
+          cta={{ label: 'View All', href: '/resources' }}
+        />
+        <div className="grid md:grid-cols-3 gap-6">
+          {latestPosts.map((p) => (
+            <BlogCard key={p.id} post={p} />
+          ))}
+        </div>
+      </section>
+
+      <StatsBar />
+
+      <CTABanner
+        eyebrow="Impact Your Sound"
+        title="Find the stick that disappears in your hand."
+        body="Or skip the search and grab a 5A — there is a reason it outsells everything else."
+        primaryCta={{ label: 'Take the Quiz', href: '/stick-finder' }}
+        secondaryCta={{ label: 'Shop the 5A', href: '/product/5a-drumstick' }}
+      />
+    </>
   );
 }

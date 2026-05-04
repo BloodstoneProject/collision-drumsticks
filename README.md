@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Collision Drumsticks
 
-## Getting Started
+Premium American Hickory drumsticks. Next.js 16 + Tailwind v4 + Supabase + Resend.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router, Server Components first)
+- Tailwind CSS v4 (`@theme` tokens in `app/globals.css`)
+- Supabase (collision_-prefixed tables, RLS enabled)
+- Resend (transactional email)
+- Snipcart (ecommerce — wired via data attributes in `app/product/[slug]/ProductActions.tsx`)
+- Vercel deployment under scope `bloodstoneprojects`
+
+## Local development
 
 ```bash
+cp .env.example .env.local
+# fill in NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, etc.
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Database
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run the initial migration once your Supabase project exists:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+psql $SUPABASE_CONNECTION_STRING < supabase/migrations/0001_initial.sql
+```
 
-## Learn More
+## Deploying
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx vercel --prod --scope bloodstoneprojects --yes
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notable routes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/` — Homepage
+- `/shop` — All products
+- `/shop/drumsticks` — Drumstick category
+- `/product/[slug]` — Product detail with variant selector + Subscribe & Save
+- `/custom` — Custom configurator (6 steps)
+- `/stick-finder` — Interactive recommendation quiz (6 steps)
+- `/artists` — Roster + `/artists/[slug]` profiles
+- `/resources` — Blog hub + `/resources/[slug]` posts
+- `/endorsements` — Tier breakdown + multi-step application
+- `/backstage` — Membership landing
+- `/wholesale` — Trade enquiries + 100 Pairs Custom
+- `/admin` — Site dashboard (under construction; protect via Supabase Auth before launch)
 
-## Deploy on Vercel
+## Design system
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Black/red brand palette with cream + amber for warmth (see `app/globals.css`)
+- Bebas Neue for display headlines, Inter for body
+- Component primitives in `components/`
+- Page heroes via `<PageHero />`, content blocks via `<SectionHeader />`, `<CTABanner />`, etc.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Content
+
+For Phase 1, products / artists / posts / FAQs live in `lib/seed-data.ts`. When the WordPress migration runs, swap these for Supabase reads using the shared client (`lib/supabase.ts`).
