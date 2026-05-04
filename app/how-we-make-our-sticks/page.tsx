@@ -14,37 +14,37 @@ const STEPS = [
     n: '01',
     title: 'Sourcing',
     body: 'Every Collision stick starts as a slab of grade-A American Hickory in Tennessee. We have used the same supplier since 2018 — we know which forest each shipment came from.',
-    image: 'https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=1600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&auto=format&fit=crop&q=80',
   },
   {
     n: '02',
     title: 'Cutting',
     body: 'Slabs are cut into 18" billets, sorted by grain pattern. Anything with a visible knot or cross-grain is rejected. We reject 35% of incoming wood — it does not enter our line.',
-    image: 'https://images.unsplash.com/photo-1473874964585-cd2841d92e88?w=1600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1611464908623-07b2bcb2080b?w=1600&auto=format&fit=crop&q=80',
   },
   {
     n: '03',
     title: 'Turning',
     body: 'Billets are CNC-turned to a rough shape, then handed to a final-finish operator who takes them to size — diameter, taper, and tip — by hand on a precision lathe.',
-    image: 'https://images.unsplash.com/photo-1541888894090-8a3a8158d3e1?w=1600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1581782906856-a37f78ddca56?w=1600&auto=format&fit=crop&q=80',
   },
   {
     n: '04',
     title: 'Weight matching',
     body: 'Every stick is individually weighed. Pairs are matched to within ±1 gram. We then pitch-test on a steel block — if the pair does not ring at the same pitch, we re-match.',
-    image: 'https://images.unsplash.com/photo-1564544193800-635aaad7a8d3?w=1600&auto=format&fit=crop&q=80',
+    image: 'https://collisiondrumsticks.com/wp-content/uploads/2023/09/PHOTO-2023-09-21-17-01-12-2.jpg',
   },
   {
     n: '05',
     title: 'Finishing',
     body: 'Natural sticks get an oil finish. Stealth Black sticks get three thin matte coats, baked between layers. Custom sticks are laser-engraved at this stage — up to 4cm × 1.5cm.',
-    image: 'https://images.unsplash.com/photo-1571974599782-87624638275a?w=1600&auto=format&fit=crop&q=80',
+    image: 'https://collisiondrumsticks.com/wp-content/uploads/2022/09/5A-Black.png',
   },
   {
     n: '06',
     title: 'Quality control',
     body: 'Every pair is hand-inspected, bend-tested, and bagged. Pairs that fail any check go in the reject bin — there is no second-tier line.',
-    image: 'https://images.unsplash.com/photo-1606127195898-1cdaf3d5db8a?w=1600&auto=format&fit=crop&q=80',
+    image: 'https://collisiondrumsticks.com/wp-content/uploads/2023/10/PHOTO-2023-10-25-09-22-37.jpg',
   },
 ];
 

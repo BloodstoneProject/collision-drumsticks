@@ -55,7 +55,7 @@ export default function EndorsementsPage() {
         title="Join the Collision family."
         subtitle={`${stats.artists}+ artists. ${stats.countries}+ countries. Three tiers — and yes, you can apply at the first one with 1,000 followers.`}
         align="center"
-        variant="cream"
+        backgroundImage="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1920&auto=format&fit=crop&q=80"
       />
 
       <section className="container-page py-16">

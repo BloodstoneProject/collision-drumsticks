@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Hero } from '@/components/Hero';
 import { TrustBar } from '@/components/TrustBar';
@@ -55,8 +56,19 @@ export default async function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="aspect-[4/3] bg-ink/5 border border-line flex items-center justify-center">
-            <p className="font-display text-7xl text-mute opacity-30">5A · 5B · 7A · 2B</p>
+          <div className="relative aspect-[4/3] overflow-hidden border border-line">
+            <Image
+              src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=1400&auto=format&fit=crop&q=80"
+              alt="Collision drumsticks"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-ink/40 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 text-bone">
+              <p className="font-display text-3xl md:text-4xl">5A · 5B · 7A · 2B</p>
+              <p className="text-xs uppercase tracking-[0.18em] mt-2 text-bone/80">Find yours</p>
+            </div>
           </div>
         </div>
       </section>

@@ -15,6 +15,7 @@ export default function WholesalePage() {
         eyebrow="Wholesale"
         title="Stock Collision."
         subtitle="UK-based, fast restocking, marketing support, competitive margins. Plus our 100 Pairs Custom programme for bulk engraving."
+        backgroundImage="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1920&auto=format&fit=crop&q=80"
       />
 
       <section className="container-page py-16">

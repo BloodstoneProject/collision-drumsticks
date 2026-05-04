@@ -26,7 +26,7 @@ export default async function BackstagePage() {
         title="Collision Backstage."
         subtitle="The membership for the modern drummer. Content, community, and growth strategies — built by working pros."
         align="center"
-        variant="dark"
+        backgroundImage="https://images.unsplash.com/photo-1517824806704-9040b037703b?w=1920&auto=format&fit=crop&q=80"
       />
 
       <section className="container-page py-16">

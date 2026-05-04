@@ -22,7 +22,7 @@ export default function AffiliatesPage() {
         title="Earn with Collision."
         subtitle="If you talk drumsticks online, you should be earning commission when your audience buys them."
         align="center"
-        variant="cream"
+        backgroundImage="https://images.unsplash.com/photo-1571974599782-87624638275a?w=1920&auto=format&fit=crop&q=80"
       />
 
       <section className="container-page py-16">
