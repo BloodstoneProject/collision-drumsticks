@@ -104,23 +104,25 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="container-page py-20 md:py-28 bg-cream -mx-5 md:-mx-8 lg:-mx-12 px-5 md:px-8 lg:px-12">
-        <SectionHeader
-          eyebrow="Featured Artist"
-          title="This week on the kit."
-          cta={{ label: 'Full Profile', href: `/artists/${featuredArtists[0]?.slug ?? ''}` }}
-        />
-        {featuredArtists[0] && (
-          <div className="grid md:grid-cols-3 gap-6">
-            <ArtistCard artist={featuredArtists[0]} />
-            <div className="md:col-span-2 flex flex-col justify-center">
-              <p className="font-display heading-md text-balance">
-                “{featuredArtists[0].testimonial_quote}”
-              </p>
-              <p className="mt-6 text-mute text-pretty">{featuredArtists[0].bio}</p>
+      <section className="bg-cream py-20 md:py-28">
+        <div className="container-page">
+          <SectionHeader
+            eyebrow="Featured Artist"
+            title="This week on the kit."
+            cta={{ label: 'Full Profile', href: `/artists/${featuredArtists[0]?.slug ?? ''}` }}
+          />
+          {featuredArtists[0] && (
+            <div className="grid md:grid-cols-3 gap-6">
+              <ArtistCard artist={featuredArtists[0]} />
+              <div className="md:col-span-2 flex flex-col justify-center">
+                <p className="font-display heading-md text-balance">
+                  “{featuredArtists[0].testimonial_quote}”
+                </p>
+                <p className="mt-6 text-mute text-pretty">{featuredArtists[0].bio}</p>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </section>
 
       <section className="container-page py-20 md:py-28">
