@@ -32,19 +32,19 @@ const STEPS = [
     n: '04',
     title: 'Weight matching',
     body: 'Every stick is individually weighed. Pairs are matched to within ±1 gram. We then pitch-test on a steel block — if the pair does not ring at the same pitch, we re-match.',
-    image: 'https://collisiondrumsticks.com/wp-content/uploads/2023/09/PHOTO-2023-09-21-17-01-12-2.jpg',
+    image: 'https://fqgrunquyoseksvrpvsg.supabase.co/storage/v1/object/public/product-images/6c34eba613c0.jpg',
   },
   {
     n: '05',
     title: 'Finishing',
     body: 'Natural sticks get an oil finish. Stealth Black sticks get three thin matte coats, baked between layers. Custom sticks are laser-engraved at this stage — up to 4cm × 1.5cm.',
-    image: 'https://collisiondrumsticks.com/wp-content/uploads/2022/09/5A-Black.png',
+    image: 'https://fqgrunquyoseksvrpvsg.supabase.co/storage/v1/object/public/product-images/5eb743dbe667.png',
   },
   {
     n: '06',
     title: 'Quality control',
     body: 'Every pair is hand-inspected, bend-tested, and bagged. Pairs that fail any check go in the reject bin — there is no second-tier line.',
-    image: 'https://collisiondrumsticks.com/wp-content/uploads/2023/10/PHOTO-2023-10-25-09-22-37.jpg',
+    image: 'https://fqgrunquyoseksvrpvsg.supabase.co/storage/v1/object/public/product-images/3994dda808d6.jpg',
   },
 ];
 
