@@ -8,7 +8,8 @@ const HERO_IMG =
 export function Hero() {
   return (
     <section className="relative bg-ink text-bone overflow-hidden">
-      <div className="absolute inset-0 opacity-25">
+      {/* Background photograph (subtle) */}
+      <div className="absolute inset-0 opacity-15">
         <Image
           src={HERO_IMG}
           alt=""
@@ -17,15 +18,28 @@ export function Hero() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/40" />
       </div>
+
+      {/* Stage lighting — warm key + crimson rim + bottom haze */}
+      <div className="hero-stage" aria-hidden="true">
+        <div className="spot" />
+      </div>
+
+      {/* Light-beam volumetric streaks */}
+      <div className="hero-beams" aria-hidden="true">
+        <div className="beam beam-1" />
+        <div className="beam beam-2" />
+        <div className="beam beam-3" />
+      </div>
+
+      {/* Bottom vignette so content stays readable */}
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink to-transparent pointer-events-none" />
+
       <div className="container-page relative py-20 md:py-28 lg:py-32">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <div className="lg:col-span-7">
             <p className="eyebrow !text-bone/60 mb-5">Collision Drumsticks</p>
-            <h1 className="font-display heading-xl text-balance">
-              Impact Your Sound.
-            </h1>
+            <h1 className="font-display heading-xl text-balance">Impact Your Sound.</h1>
             <p className="mt-5 max-w-xl text-lg text-bone/80 text-pretty">
               Premium American Hickory drumsticks, weight-matched in Newcastle. Trusted by
               10,000+ drummers across 80+ countries.
