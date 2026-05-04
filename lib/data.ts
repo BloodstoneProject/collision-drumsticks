@@ -222,15 +222,107 @@ export async function getFAQs(): Promise<FAQ[]> {
   }));
 }
 
-// Artists are not in WordPress - keep them in seed-data for now.
+const ARTIST_FIELDS =
+  'id, name, slug, bio, short_bio, photo_url, endorsement_tier, genres, country, city, instagram_handle, instagram_followers, youtube_handle, tiktok_handle, favourite_stick, testimonial_quote, is_featured, joined_date';
+
+function normaliseArtist(row: Record<string, unknown>): Artist {
+  return {
+    id: String(row.id),
+    name: String(row.name),
+    slug: String(row.slug),
+    short_bio: String(row.short_bio ?? ''),
+    bio: String(row.bio ?? ''),
+    photo_url: String(row.photo_url ?? ''),
+    endorsement_tier: row.endorsement_tier as Artist['endorsement_tier'],
+    genres: (row.genres as string[]) ?? [],
+    country: String(row.country ?? ''),
+    city: row.city as string | undefined,
+    instagram_handle: row.instagram_handle as string | undefined,
+    instagram_followers: row.instagram_followers ? Number(row.instagram_followers) : undefined,
+    youtube_handle: row.youtube_handle as string | undefined,
+    tiktok_handle: row.tiktok_handle as string | undefined,
+    favourite_stick: (row.favourite_stick ?? '5A') as Artist['favourite_stick'],
+    testimonial_quote: String(row.testimonial_quote ?? ''),
+    is_featured: Boolean(row.is_featured),
+    joined_year: row.joined_date ? new Date(row.joined_date as string).getFullYear() : 2024,
+  };
+}
+
 export async function getArtists(): Promise<Artist[]> {
-  return seed.artists;
+  if (!supabase) return seed.artists;
+  const { data, error } = await supabase
+    .from('collision_artists')
+    .select(ARTIST_FIELDS)
+    .eq('is_active', true)
+    .order('endorsement_tier', { ascending: true })
+    .order('name', { ascending: true });
+  if (error || !data || data.length === 0) return seed.artists;
+  return data.map(normaliseArtist);
 }
 
 export async function getFeaturedArtists(limit = 3): Promise<Artist[]> {
+  if (!supabase) return seed.artists.filter((a) => a.is_featured).slice(0, limit);
+  // Try featured first, then fall back to Impact-tier artists
+  const { data: featured } = await supabase
+    .from('collision_artists')
+    .select(ARTIST_FIELDS)
+    .eq('is_active', true)
+    .eq('is_featured', true)
+    .limit(limit);
+  if (featured && featured.length >= limit) return featured.map(normaliseArtist);
+
+  const { data: impact } = await supabase
+    .from('collision_artists')
+    .select(ARTIST_FIELDS)
+    .eq('is_active', true)
+    .eq('endorsement_tier', 'impact')
+    .limit(limit);
+  const fromDb = impact ?? [];
+  if (fromDb.length > 0) return fromDb.map(normaliseArtist);
   return seed.artists.filter((a) => a.is_featured).slice(0, limit);
 }
 
 export async function getArtist(slug: string): Promise<Artist | null> {
-  return seed.artists.find((a) => a.slug === slug) ?? null;
+  if (!supabase) return seed.artists.find((a) => a.slug === slug) ?? null;
+  const { data } = await supabase
+    .from('collision_artists')
+    .select(ARTIST_FIELDS)
+    .eq('slug', slug)
+    .eq('is_active', true)
+    .maybeSingle();
+  if (!data) return seed.artists.find((a) => a.slug === slug) ?? null;
+  return normaliseArtist(data);
+}
+
+export async function getAllArtistSlugs(): Promise<string[]> {
+  if (!supabase) return seed.artists.map((a) => a.slug);
+  const { data } = await supabase
+    .from('collision_artists')
+    .select('slug')
+    .eq('is_active', true);
+  if (!data) return seed.artists.map((a) => a.slug);
+  return data.map((r) => r.slug as string);
+}
+
+export async function getPostsCount(): Promise<number> {
+  if (!supabase) return seed.blogPosts.length;
+  const { count } = await supabase
+    .from('collision_posts')
+    .select('*', { count: 'exact', head: true })
+    .eq('is_published', true);
+  return count ?? 0;
+}
+
+export async function getPostsPaged(page: number, perPage: number): Promise<BlogPost[]> {
+  if (!supabase) return seed.blogPosts.slice((page - 1) * perPage, page * perPage);
+  const from = (page - 1) * perPage;
+  const to = from + perPage - 1;
+  const { data } = await supabase
+    .from('collision_posts')
+    .select(POST_FIELDS)
+    .eq('is_published', true)
+    .order('published_at', { ascending: false })
+    .range(from, to);
+  if (!data) return [];
+  return data.map(normalisePost);
 }
