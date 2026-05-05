@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { PageHero } from '@/components/PageHero';
 import { Testimonial } from '@/components/Testimonial';
 import { FAQAccordion } from '@/components/FAQAccordion';
@@ -281,6 +282,13 @@ export default function EndorsementsPage() {
               <Testimonial key={a.id} artist={a} />
             ))}
           </div>
+          <p className="mt-10 text-sm text-mute text-center">
+            Browse the full{' '}
+            <Link href="/artists" className="underline hover:text-crimson">roster of {stats.artists}+ endorsed players</Link>
+            , or join the paid community on{' '}
+            <Link href="/backstage" className="underline hover:text-crimson">Backstage</Link>{' '}
+            for member only practice content and Q&amp;As.
+          </p>
         </div>
       </section>
 
@@ -293,7 +301,11 @@ export default function EndorsementsPage() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               Read these before you apply. It will save us both an email exchange and it makes
-              your application stronger.
+              your application stronger. Other ways to work with us:{' '}
+              <Link href="/wholesale" className="underline hover:text-crimson">wholesale</Link>{' '}
+              and{' '}
+              <Link href="/affiliates" className="underline hover:text-crimson">affiliates</Link>
+              .
             </p>
           </div>
           <div className="lg:col-span-8">

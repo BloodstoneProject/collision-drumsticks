@@ -33,6 +33,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/privacy-policy',
     '/terms-conditions',
     '/store-policies',
+    '/drumsticks-for-jazz',
+    '/drumsticks-for-rock',
+    '/drumsticks-for-metal',
+    '/drumsticks-for-beginners',
+    '/best-drumsticks-uk',
+    '/compare/5a-vs-5b',
+    '/compare/wood-tip-vs-nylon-tip',
+    '/compare/natural-vs-stealth-black',
   ];
 
   const now = new Date();

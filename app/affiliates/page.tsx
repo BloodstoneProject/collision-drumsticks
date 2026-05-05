@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { PageHero } from '@/components/PageHero';
 import { CTABanner } from '@/components/CTABanner';
 import { FAQAccordion } from '@/components/FAQAccordion';
@@ -294,6 +295,15 @@ export default function AffiliatesPage() {
             <h2 className="font-display heading-md text-balance">
               The questions affiliates ask before they sign up.
             </h2>
+            <p className="mt-4 text-mute text-pretty">
+              Other ways to work with us:{' '}
+              <Link href="/endorsements" className="underline hover:text-crimson">endorsements</Link>{' '}
+              for active drummers,{' '}
+              <Link href="/wholesale" className="underline hover:text-crimson">wholesale</Link>{' '}
+              for retailers, or join the paid community on{' '}
+              <Link href="/backstage" className="underline hover:text-crimson">Backstage</Link>
+              .
+            </p>
           </div>
           <div className="lg:col-span-8">
             <FAQAccordion items={AFFILIATE_FAQ} />

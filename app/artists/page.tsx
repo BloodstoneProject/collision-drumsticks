@@ -166,6 +166,15 @@ export default async function ArtistsPage() {
             <ArtistCard key={a.id} artist={a} />
           ))}
         </div>
+        <p className="mt-12 text-sm text-mute">
+          Want to play what they play?{' '}
+          <Link href="/stick-finder" className="underline hover:text-crimson">Take the stick finder quiz</Link>
+          {' '}or browse the{' '}
+          <Link href="/shop/drumsticks" className="underline hover:text-crimson">full drumstick lineup</Link>
+          . Roster members hang out in the{' '}
+          <Link href="/backstage" className="underline hover:text-crimson">Backstage</Link>{' '}
+          private community alongside paid members.
+        </p>
       </section>
 
       <CTABanner

@@ -187,6 +187,64 @@ export default async function DrumsticksPage() {
         </div>
       </section>
 
+      <section className="bg-cream">
+        <div className="container-page py-16 md:py-20">
+          <div className="max-w-3xl">
+            <p className="eyebrow mb-3">By genre</p>
+            <h2 className="font-display heading-md text-balance">
+              Pick by what you actually play.
+            </h2>
+            <p className="mt-4 text-mute text-pretty max-w-2xl">
+              Four use case guides covering the genres we get asked about most. Each lands on a
+              specific recommendation with two alternatives.
+            </p>
+          </div>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { label: 'Jazz', model: '7A', href: '/drumsticks-for-jazz' },
+              { label: 'Rock', model: '5B', href: '/drumsticks-for-rock' },
+              { label: 'Metal', model: '2B nylon', href: '/drumsticks-for-metal' },
+              { label: 'Beginners', model: '5A', href: '/drumsticks-for-beginners' },
+            ].map((g) => (
+              <Link
+                key={g.label}
+                href={g.href}
+                className="block bg-bone border border-line p-6 hover:border-ink transition-colors"
+              >
+                <p className="eyebrow text-crimson">For {g.label.toLowerCase()}</p>
+                <p className="mt-3 font-display text-4xl">{g.model}</p>
+                <p className="mt-3 text-xs uppercase tracking-[0.18em] font-semibold">
+                  Read the guide &rarr;
+                </p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-12 max-w-3xl">
+            <p className="eyebrow mb-3">Still comparing</p>
+            <h3 className="font-display heading-sm text-balance">Three side by side breakdowns.</h3>
+          </div>
+          <div className="mt-6 grid sm:grid-cols-3 gap-4">
+            {[
+              { label: '5A vs 5B', href: '/compare/5a-vs-5b' },
+              { label: 'Wood tip vs nylon tip', href: '/compare/wood-tip-vs-nylon-tip' },
+              { label: 'Natural vs Stealth Black', href: '/compare/natural-vs-stealth-black' },
+            ].map((c) => (
+              <Link
+                key={c.label}
+                href={c.href}
+                className="block bg-bone border border-line p-5 hover:border-ink transition-colors"
+              >
+                <p className="font-display text-xl leading-tight">{c.label}</p>
+                <p className="mt-2 text-xs uppercase tracking-[0.18em] font-semibold text-crimson">
+                  Compare &rarr;
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <CTABanner
         eyebrow="Still deciding"
         title="Take the 60 second stick finder."

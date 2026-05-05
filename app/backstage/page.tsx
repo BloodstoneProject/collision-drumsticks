@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { PageHero } from '@/components/PageHero';
 import { CTABanner } from '@/components/CTABanner';
 import { FAQAccordion } from '@/components/FAQAccordion';
@@ -269,6 +270,15 @@ export default async function BackstagePage() {
             <p className="eyebrow mb-3">FAQ</p>
             <h2 className="font-display heading-md mb-8 text-balance">Backstage questions, answered.</h2>
             <FAQAccordion items={backstageFaqs} />
+            <p className="mt-8 text-sm text-mute text-pretty">
+              Backstage members get a discount stack with the{' '}
+              <Link href="/endorsements" className="underline hover:text-crimson">artist programme</Link>
+              . Browse the public{' '}
+              <Link href="/resources" className="underline hover:text-crimson">free resources hub</Link>{' '}
+              to see the kind of content the paid library scales up. Or meet the{' '}
+              <Link href="/artists" className="underline hover:text-crimson">family of endorsed players</Link>{' '}
+              who hang out in the member Discord.
+            </p>
           </div>
         </section>
       )}

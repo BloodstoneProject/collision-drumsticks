@@ -262,6 +262,15 @@ export default function CustomPage() {
             <h2 className="font-display heading-md text-balance">
               The eight questions every customer asks.
             </h2>
+            <p className="mt-4 text-mute text-pretty">
+              Custom can start from any base SKU. See the full lineup on the{' '}
+              <Link href="/shop/drumsticks" className="underline hover:text-crimson">drumsticks page</Link>
+              . For 100+ pair runs, see{' '}
+              <Link href="/wholesale" className="underline hover:text-crimson">bulk wholesale custom</Link>
+              . Returns differ for custom: see the{' '}
+              <Link href="/returns-exchanges" className="underline hover:text-crimson">returns policy</Link>
+              .
+            </p>
           </div>
           <div className="lg:col-span-8">
             <FAQAccordion items={CUSTOM_FAQ} />

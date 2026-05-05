@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { PageHero } from '@/components/PageHero';
 import { FAQAccordion } from '@/components/FAQAccordion';
+import { CTABanner } from '@/components/CTABanner';
 import { WholesaleForm } from './WholesaleForm';
 
 export const metadata: Metadata = {
@@ -288,7 +290,10 @@ export default function WholesalePage() {
             <p className="text-mute text-pretty leading-relaxed">
               Need 100+ pairs of custom engraved drumsticks? We run regular bulk batches for music
               schools, drum schools, branded merch programmes, and large bands. Trade pricing,
-              expedited production where possible, and full design support.
+              expedited production where possible, and full design support. For one off custom
+              from a single pair, see the{' '}
+              <Link href="/custom" className="underline hover:text-crimson">custom configurator</Link>
+              .
             </p>
             <ul className="mt-6 space-y-2 text-sm">
               {[
@@ -326,9 +331,24 @@ export default function WholesalePage() {
           <div>
             <p className="eyebrow mb-3">Submit an enquiry</p>
             <WholesaleForm />
+            <p className="mt-6 text-xs text-mute">
+              For UK shipping options on stock orders, see the{' '}
+              <Link href="/shipping-delivery" className="underline hover:text-crimson">shipping page</Link>
+              . For made in the UK background, see{' '}
+              <Link href="/best-drumsticks-uk" className="underline hover:text-crimson">why UK made</Link>
+              .
+            </p>
           </div>
         </div>
       </section>
+
+      <CTABanner
+        eyebrow="Other ways to work with us"
+        title="Endorsements and affiliates also open."
+        body="If you sell, play, or promote drumsticks, there is a programme that fits."
+        primaryCta={{ label: 'Affiliate programme', href: '/affiliates' }}
+        secondaryCta={{ label: 'Endorsements', href: '/endorsements' }}
+      />
     </>
   );
 }

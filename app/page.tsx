@@ -150,6 +150,39 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <section className="bg-cream">
+        <div className="container-page py-20 md:py-28">
+          <SectionHeader
+            eyebrow="Buyer guides"
+            title="Pick by genre, by model, or by tip."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {[
+              { label: 'For jazz', body: 'The 7A is the answer.', href: '/drumsticks-for-jazz' },
+              { label: 'For rock', body: 'The 5B is the answer.', href: '/drumsticks-for-rock' },
+              { label: 'For metal', body: 'The 2B nylon is the answer.', href: '/drumsticks-for-metal' },
+              { label: 'For beginners', body: 'The 5A is the universal start.', href: '/drumsticks-for-beginners' },
+              { label: '5A vs 5B', body: 'The two most asked about models, side by side.', href: '/compare/5a-vs-5b' },
+              { label: 'Wood vs nylon', body: 'Cymbal tone, durability, and the genre call.', href: '/compare/wood-tip-vs-nylon-tip' },
+              { label: 'Natural vs Stealth Black', body: 'Same wood, two finishes. Which to pick.', href: '/compare/natural-vs-stealth-black' },
+              { label: 'UK customers', body: 'Made in Newcastle, free UK shipping over £49.', href: '/best-drumsticks-uk' },
+            ].map((g) => (
+              <Link
+                key={g.label}
+                href={g.href}
+                className="block bg-bone border border-line p-5 hover:border-ink transition-colors"
+              >
+                <p className="eyebrow text-crimson">{g.label}</p>
+                <p className="mt-2 font-display text-lg leading-tight text-balance">{g.body}</p>
+                <p className="mt-3 text-xs uppercase tracking-[0.18em] font-semibold">
+                  Read the guide &rarr;
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <StatsBar />
 
       <CTABanner
