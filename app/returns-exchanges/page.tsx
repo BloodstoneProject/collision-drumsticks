@@ -256,7 +256,7 @@ export default function ReturnsPage() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               For shipping options and lead times, see the{' '}
-              <Link href="/shipping-delivery" className="underline hover:text-crimson">
+              <Link href="/shipping-delivery" className="link-anim">
                 shipping page
               </Link>
               .

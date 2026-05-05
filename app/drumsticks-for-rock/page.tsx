@@ -119,7 +119,7 @@ export default function RockPage() {
             </dl>
             <p className="mt-6 text-xs text-mute">
               From £14.95 a pair. Free UK shipping over £49. Touring drummers tend to set up{' '}
-              <Link href="/shop/bundles" className="underline hover:text-crimson">
+              <Link href="/shop/bundles" className="link-anim">
                 Subscribe & Save
               </Link>{' '}
               with two pairs a month.
@@ -128,7 +128,7 @@ export default function RockPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="grain bg-ink text-bone">
         <div className="container-page py-16 md:py-20">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">If 5B is not heavy enough</p>
@@ -163,11 +163,11 @@ export default function RockPage() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               Compare the 5A and 5B side by side on the{' '}
-              <Link href="/compare/5a-vs-5b" className="underline hover:text-crimson">
+              <Link href="/compare/5a-vs-5b" className="link-anim">
                 comparison page
               </Link>
               , or browse the full{' '}
-              <Link href="/shop/drumsticks" className="underline hover:text-crimson">
+              <Link href="/shop/drumsticks" className="link-anim">
                 drumsticks lineup
               </Link>
               .

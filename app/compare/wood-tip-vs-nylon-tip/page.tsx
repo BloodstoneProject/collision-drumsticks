@@ -147,19 +147,19 @@ export default function Page() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               For more genre specific guidance, see{' '}
-              <Link href="/drumsticks-for-jazz" className="underline hover:text-crimson">
+              <Link href="/drumsticks-for-jazz" className="link-anim">
                 jazz
               </Link>
               ,{' '}
-              <Link href="/drumsticks-for-rock" className="underline hover:text-crimson">
+              <Link href="/drumsticks-for-rock" className="link-anim">
                 rock
               </Link>
               , or{' '}
-              <Link href="/drumsticks-for-metal" className="underline hover:text-crimson">
+              <Link href="/drumsticks-for-metal" className="link-anim">
                 metal
               </Link>{' '}
               recommendations. For finish, see{' '}
-              <Link href="/compare/natural-vs-stealth-black" className="underline hover:text-crimson">
+              <Link href="/compare/natural-vs-stealth-black" className="link-anim">
                 Natural vs Stealth Black
               </Link>
               .

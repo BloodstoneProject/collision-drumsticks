@@ -150,15 +150,15 @@ export default function Page() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               Want a 7A in the comparison too? See the{' '}
-              <Link href="/drumsticks-for-jazz" className="underline hover:text-crimson">
+              <Link href="/drumsticks-for-jazz" className="link-anim">
                 drumsticks for jazz
               </Link>{' '}
               page. Want the heavier end? See{' '}
-              <Link href="/drumsticks-for-rock" className="underline hover:text-crimson">
+              <Link href="/drumsticks-for-rock" className="link-anim">
                 drumsticks for rock
               </Link>{' '}
               and{' '}
-              <Link href="/drumsticks-for-metal" className="underline hover:text-crimson">
+              <Link href="/drumsticks-for-metal" className="link-anim">
                 metal
               </Link>
               .

@@ -185,7 +185,7 @@ export default async function BackstagePage() {
         </div>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="grain bg-ink text-bone">
         <div className="container-page py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">Week one</p>
@@ -272,11 +272,11 @@ export default async function BackstagePage() {
             <FAQAccordion items={backstageFaqs} />
             <p className="mt-8 text-sm text-mute text-pretty">
               Backstage members get a discount stack with the{' '}
-              <Link href="/endorsements" className="underline hover:text-crimson">artist programme</Link>
+              <Link href="/endorsements" className="link-anim">artist programme</Link>
               . Browse the public{' '}
-              <Link href="/resources" className="underline hover:text-crimson">free resources hub</Link>{' '}
+              <Link href="/resources" className="link-anim">free resources hub</Link>{' '}
               to see the kind of content the paid library scales up. Or meet the{' '}
-              <Link href="/artists" className="underline hover:text-crimson">family of endorsed players</Link>{' '}
+              <Link href="/artists" className="link-anim">family of endorsed players</Link>{' '}
               who hang out in the member Discord.
             </p>
           </div>

@@ -6,6 +6,8 @@ import { format } from 'date-fns';
 import { getAllPostSlugs, getPost, getPosts } from '@/lib/data';
 import { BlogCard } from '@/components/BlogCard';
 import { NewsletterForm } from '@/components/NewsletterForm';
+import { ReadingProgress } from '@/components/ReadingProgress';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 export const revalidate = 600;
 
@@ -108,9 +110,20 @@ export default async function PostPage({ params }: PageProps<'/resources/[slug]'
 
   return (
     <>
+      <ReadingProgress />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <article>
-        <div className="container-narrow pt-12 md:pt-16">
+        <div className="container-narrow pt-8 md:pt-10">
+          <Breadcrumbs
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Resources', href: '/resources' },
+              { label: post.category.replace('-', ' '), href: `/resources/category/${post.category}` },
+              { label: post.title },
+            ]}
+          />
+        </div>
+        <div className="container-narrow pt-6 md:pt-10">
           <p className="eyebrow mb-3">{post.category.replace('-', ' ')}</p>
           <h1 className="font-display heading-lg text-balance">{post.title}</h1>
           <div className="mt-4 flex items-center gap-4 text-sm text-mute">

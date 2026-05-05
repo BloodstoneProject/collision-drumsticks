@@ -140,7 +140,7 @@ export default function ShippingPage() {
             <p className="text-sm text-mute text-pretty">
               Every order gets a tracking link by email within 24 hours of dispatch (usually under
               4). If you have not received it after 48 hours, write to{' '}
-              <a href="mailto:sales@collisiondrumsticks.com" className="underline hover:text-crimson">
+              <a href="mailto:sales@collisiondrumsticks.com" className="link-anim">
                 sales@collisiondrumsticks.com
               </a>
               .
@@ -202,7 +202,7 @@ export default function ShippingPage() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               For returns and refunds, see the{' '}
-              <Link href="/returns-exchanges" className="underline hover:text-crimson">
+              <Link href="/returns-exchanges" className="link-anim">
                 returns page
               </Link>
               .

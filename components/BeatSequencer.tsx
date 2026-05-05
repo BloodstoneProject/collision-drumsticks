@@ -1,7 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Play, Pause, RotateCcw, Volume2, VolumeX } from 'lucide-react';
+import { Play, Pause, RotateCcw, Volume2, VolumeX, X } from 'lucide-react';
+
+const SECRET_KEY = 'collision-secret-unlocked';
+const SECRET_CODE = 'DRUMMER15';
 
 const ROWS = ['KICK', 'SNARE', 'HI-HAT', 'OPEN'] as const;
 type Row = (typeof ROWS)[number];
@@ -31,6 +34,8 @@ export function BeatSequencer() {
   const [playing, setPlaying] = useState(true);
   const [audioOn, setAudioOn] = useState(false);
   const [reduced, setReduced] = useState(false);
+  const [secretToast, setSecretToast] = useState(false);
+  const unlockedRef = useRef(false);
 
   const stepRef = useRef(0);
   const patternRef = useRef(pattern);
@@ -39,6 +44,28 @@ export function BeatSequencer() {
 
   useEffect(() => { patternRef.current = pattern; }, [pattern]);
   useEffect(() => { audioOnRef.current = audioOn; }, [audioOn]);
+
+  // Easter egg: filling every kick step (16/16) unlocks a hidden discount code.
+  useEffect(() => {
+    try {
+      unlockedRef.current = window.localStorage.getItem(SECRET_KEY) === '1';
+    } catch {
+      unlockedRef.current = false;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (unlockedRef.current) return;
+    const allKickOn = pattern.KICK.every((v) => v === 1);
+    if (!allKickOn) return;
+    unlockedRef.current = true;
+    try {
+      window.localStorage.setItem(SECRET_KEY, '1');
+    } catch {
+      // ignore
+    }
+    setSecretToast(true);
+  }, [pattern.KICK]);
 
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -178,6 +205,33 @@ export function BeatSequencer() {
       <p className="mt-5 text-[0.62rem] uppercase tracking-[0.16em] text-bone/40">
         {audioOn ? 'Sound on - click any cell.' : 'Tap the speaker to hear it.'}
       </p>
+
+      {secretToast && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="absolute -top-3 left-1/2 -translate-x-1/2 -translate-y-full bg-crimson text-bone shadow-2xl border border-crimson-deep px-5 py-4 w-[min(420px,calc(100vw-2rem))]"
+        >
+          <button
+            type="button"
+            onClick={() => setSecretToast(false)}
+            aria-label="Dismiss"
+            className="absolute top-2 right-2 p-1 text-bone/80 hover:text-bone"
+          >
+            <X size={14} />
+          </button>
+          <p className="eyebrow !text-bone/70">Secret unlocked</p>
+          <p className="mt-1 font-display text-xl leading-tight">
+            That was a wall of kick. Have 15% off.
+          </p>
+          <p className="mt-3 inline-block bg-ink text-bone font-display tracking-[0.25em] text-2xl px-4 py-2">
+            {SECRET_CODE}
+          </p>
+          <p className="mt-3 text-[0.65rem] uppercase tracking-[0.15em] text-bone/70">
+            Use it once at checkout. Stacks on free shipping.
+          </p>
+        </div>
+      )}
     </div>
   );
 }

@@ -108,7 +108,7 @@ export default async function ArtistsPage() {
       )}
 
       {(topCountries.length > 0 || topGenres.length > 0) && (
-        <section className="bg-ink text-bone">
+        <section className="grain bg-ink text-bone">
           <div className="container-page py-16 md:py-20">
             <div className="max-w-3xl">
               <p className="eyebrow !text-bone/60 mb-3">By country, by genre</p>
@@ -177,11 +177,11 @@ export default async function ArtistsPage() {
         </div>
         <p className="mt-12 text-sm text-mute">
           Want to play what they play?{' '}
-          <Link href="/stick-finder" className="underline hover:text-crimson">Take the stick finder quiz</Link>
+          <Link href="/stick-finder" className="link-anim">Take the stick finder quiz</Link>
           {' '}or browse the{' '}
-          <Link href="/shop/drumsticks" className="underline hover:text-crimson">full drumstick lineup</Link>
+          <Link href="/shop/drumsticks" className="link-anim">full drumstick lineup</Link>
           . Roster members hang out in the{' '}
-          <Link href="/backstage" className="underline hover:text-crimson">Backstage</Link>{' '}
+          <Link href="/backstage" className="link-anim">Backstage</Link>{' '}
           private community alongside paid members.
         </p>
       </section>

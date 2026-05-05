@@ -79,7 +79,7 @@ export default function StickFinderPage() {
           </div>
           <p className="mt-8 text-sm text-mute">
             Want the full lineup with specs side by side?{' '}
-            <Link href="/shop/drumsticks" className="underline hover:text-crimson">
+            <Link href="/shop/drumsticks" className="link-anim">
               See the comparison table on the drumsticks page
             </Link>
             .

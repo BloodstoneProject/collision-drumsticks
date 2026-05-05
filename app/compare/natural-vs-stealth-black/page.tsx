@@ -148,15 +148,15 @@ export default function Page() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               For tip type, see the{' '}
-              <Link href="/compare/wood-tip-vs-nylon-tip" className="underline hover:text-crimson">
+              <Link href="/compare/wood-tip-vs-nylon-tip" className="link-anim">
                 wood vs nylon comparison
               </Link>
               . For model selection, the{' '}
-              <Link href="/compare/5a-vs-5b" className="underline hover:text-crimson">
+              <Link href="/compare/5a-vs-5b" className="link-anim">
                 5A vs 5B comparison
               </Link>{' '}
               and{' '}
-              <Link href="/stick-finder" className="underline hover:text-crimson">
+              <Link href="/stick-finder" className="link-anim">
                 stick finder quiz
               </Link>{' '}
               are the next places to look.

@@ -119,7 +119,7 @@ export default function JazzPage() {
             <p className="mt-6 text-xs text-mute">
               From £13.50 a pair. Free UK shipping over £49. Three pair Gigging Pack available
               from{' '}
-              <Link href="/shop/bundles" className="underline hover:text-crimson">
+              <Link href="/shop/bundles" className="link-anim">
                 bundles
               </Link>
               .
@@ -128,7 +128,7 @@ export default function JazzPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="grain bg-ink text-bone">
         <div className="container-page py-16 md:py-20">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">If 7A is not right</p>
@@ -163,11 +163,11 @@ export default function JazzPage() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               For a side by side of the 7A against the 5A, see the{' '}
-              <Link href="/compare/5a-vs-5b" className="underline hover:text-crimson">
+              <Link href="/compare/5a-vs-5b" className="link-anim">
                 model comparison
               </Link>{' '}
               page. For the full lineup, see{' '}
-              <Link href="/shop/drumsticks" className="underline hover:text-crimson">
+              <Link href="/shop/drumsticks" className="link-anim">
                 the drumsticks page
               </Link>
               .

@@ -179,7 +179,7 @@ export default function WholesalePage() {
         </div>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="grain bg-ink text-bone">
         <div className="container-page py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">Trade pricing</p>
@@ -292,7 +292,7 @@ export default function WholesalePage() {
               schools, drum schools, branded merch programmes, and large bands. Trade pricing,
               expedited production where possible, and full design support. For one off custom
               from a single pair, see the{' '}
-              <Link href="/custom" className="underline hover:text-crimson">custom configurator</Link>
+              <Link href="/custom" className="link-anim">custom configurator</Link>
               .
             </p>
             <ul className="mt-6 space-y-2 text-sm">
@@ -333,9 +333,9 @@ export default function WholesalePage() {
             <WholesaleForm />
             <p className="mt-6 text-xs text-mute">
               For UK shipping options on stock orders, see the{' '}
-              <Link href="/shipping-delivery" className="underline hover:text-crimson">shipping page</Link>
+              <Link href="/shipping-delivery" className="link-anim">shipping page</Link>
               . For made in the UK background, see{' '}
-              <Link href="/best-drumsticks-uk" className="underline hover:text-crimson">why UK made</Link>
+              <Link href="/best-drumsticks-uk" className="link-anim">why UK made</Link>
               .
             </p>
           </div>

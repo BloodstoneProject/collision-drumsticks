@@ -58,27 +58,27 @@ export default async function FAQPage() {
           <h2 className="font-display heading-sm mb-4">Try a more specific page.</h2>
           <ul className="grid sm:grid-cols-2 gap-3 text-sm">
             <li>
-              <Link href="/contact" className="underline hover:text-crimson">Contact us directly</Link>
+              <Link href="/contact" className="link-anim">Contact us directly</Link>
               {' '}for a personal reply within one working day.
             </li>
             <li>
-              <Link href="/shipping-delivery" className="underline hover:text-crimson">Shipping & delivery</Link>
+              <Link href="/shipping-delivery" className="link-anim">Shipping & delivery</Link>
               {' '}for country by country lead times.
             </li>
             <li>
-              <Link href="/returns-exchanges" className="underline hover:text-crimson">Returns & exchanges</Link>
+              <Link href="/returns-exchanges" className="link-anim">Returns & exchanges</Link>
               {' '}for the full returns policy.
             </li>
             <li>
-              <Link href="/stick-finder" className="underline hover:text-crimson">Stick finder</Link>
+              <Link href="/stick-finder" className="link-anim">Stick finder</Link>
               {' '}if your question is which model to buy.
             </li>
             <li>
-              <Link href="/how-we-make-our-sticks" className="underline hover:text-crimson">How we make our sticks</Link>
+              <Link href="/how-we-make-our-sticks" className="link-anim">How we make our sticks</Link>
               {' '}for manufacturing detail.
             </li>
             <li>
-              <Link href="/best-drumsticks-uk" className="underline hover:text-crimson">UK customers</Link>
+              <Link href="/best-drumsticks-uk" className="link-anim">UK customers</Link>
               {' '}for free UK shipping and delivery options.
             </li>
           </ul>

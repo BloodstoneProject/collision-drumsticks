@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PageHero } from '@/components/PageHero';
 import { BlogCard } from '@/components/BlogCard';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { getPostsByCategory } from '@/lib/data';
 
 export const revalidate = 600;
@@ -35,6 +36,15 @@ export default async function CategoryPage({ params }: PageProps<'/resources/cat
         title={category.replace('-', ' ').replace(/\b\w/g, (c) => c.toUpperCase())}
         subtitle={`${posts.length} post${posts.length === 1 ? '' : 's'} in this category.`}
       />
+      <div className="container-page pt-6">
+        <Breadcrumbs
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Resources', href: '/resources' },
+            { label: category.replace('-', ' ') },
+          ]}
+        />
+      </div>
       <section className="container-page py-12">
         {posts.length === 0 ? (
           <p className="text-mute">No posts yet in this category.</p>

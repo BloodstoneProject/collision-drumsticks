@@ -157,7 +157,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="reveal bg-ink text-bone">
+      <section className="reveal grain bg-ink text-bone">
         <div className="container-page py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">Timeline</p>
@@ -286,7 +286,7 @@ export default function AboutPage() {
           We have been profiled in Music Observer and reviewed across the major drumming press,
           including coverage in Rhythm, Drummer, Modern Drummer, and Mike Dolbear. Read the
           highlights on the {' '}
-          <Link href="/resources" className="underline hover:text-crimson">resources</Link> page.
+          <Link href="/resources" className="link-anim">resources</Link> page.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mt-8">
           {[

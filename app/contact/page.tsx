@@ -94,12 +94,12 @@ export default function ContactPage() {
             <div className="mt-10">
               <p className="eyebrow mb-3">Self serve first</p>
               <ul className="space-y-2 text-sm">
-                <li><Link href="/faq" className="underline hover:text-crimson">FAQ (78 entries across 7 topics)</Link></li>
-                <li><Link href="/shipping-delivery" className="underline hover:text-crimson">Shipping & delivery times by country</Link></li>
-                <li><Link href="/returns-exchanges" className="underline hover:text-crimson">Returns & refund policy</Link></li>
-                <li><Link href="/endorsements" className="underline hover:text-crimson">Endorsement applications</Link></li>
-                <li><Link href="/wholesale" className="underline hover:text-crimson">Wholesale enquiries</Link></li>
-                <li><Link href="/affiliates" className="underline hover:text-crimson">Affiliate programme</Link></li>
+                <li><Link href="/faq" className="link-anim">FAQ (78 entries across 7 topics)</Link></li>
+                <li><Link href="/shipping-delivery" className="link-anim">Shipping & delivery times by country</Link></li>
+                <li><Link href="/returns-exchanges" className="link-anim">Returns & refund policy</Link></li>
+                <li><Link href="/endorsements" className="link-anim">Endorsement applications</Link></li>
+                <li><Link href="/wholesale" className="link-anim">Wholesale enquiries</Link></li>
+                <li><Link href="/affiliates" className="link-anim">Affiliate programme</Link></li>
               </ul>
             </div>
           </div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="grain bg-ink text-bone">
         <div className="container-page py-16 md:py-20">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">Routing</p>

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Menu, X, ShoppingBag, User, Search } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 const SHOP_MEGA = {
   categories: [
@@ -174,6 +175,9 @@ export function Nav() {
               ⌘K
             </span>
           </button>
+          <span className="hidden md:inline-flex">
+            <ThemeToggle />
+          </span>
           <Link href="/my-account" aria-label="Account" className="hidden md:inline-flex p-2 hover:text-crimson">
             <User size={18} />
           </Link>

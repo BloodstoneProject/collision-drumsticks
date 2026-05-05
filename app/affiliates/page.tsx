@@ -219,7 +219,7 @@ export default function AffiliatesPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="grain bg-ink text-bone">
         <div className="container-page py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">Earnings examples</p>
@@ -297,11 +297,11 @@ export default function AffiliatesPage() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               Other ways to work with us:{' '}
-              <Link href="/endorsements" className="underline hover:text-crimson">endorsements</Link>{' '}
+              <Link href="/endorsements" className="link-anim">endorsements</Link>{' '}
               for active drummers,{' '}
-              <Link href="/wholesale" className="underline hover:text-crimson">wholesale</Link>{' '}
+              <Link href="/wholesale" className="link-anim">wholesale</Link>{' '}
               for retailers, or join the paid community on{' '}
-              <Link href="/backstage" className="underline hover:text-crimson">Backstage</Link>
+              <Link href="/backstage" className="link-anim">Backstage</Link>
               .
             </p>
           </div>

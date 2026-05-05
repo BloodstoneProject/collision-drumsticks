@@ -119,7 +119,7 @@ export default function MetalPage() {
             </dl>
             <p className="mt-6 text-xs text-mute">
               From £15.95 a pair. Free UK shipping over £49. Touring metal drummers tend to run{' '}
-              <Link href="/shop/bundles" className="underline hover:text-crimson">
+              <Link href="/shop/bundles" className="link-anim">
                 Subscribe & Save
               </Link>{' '}
               on three pairs a month.
@@ -128,7 +128,7 @@ export default function MetalPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="grain bg-ink text-bone">
         <div className="container-page py-16 md:py-20">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">Lighter alternatives</p>
@@ -163,11 +163,11 @@ export default function MetalPage() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               See the wood vs nylon{' '}
-              <Link href="/compare/wood-tip-vs-nylon-tip" className="underline hover:text-crimson">
+              <Link href="/compare/wood-tip-vs-nylon-tip" className="link-anim">
                 comparison page
               </Link>{' '}
               for the durability numbers, or compare Natural and Stealth Black on the{' '}
-              <Link href="/compare/natural-vs-stealth-black" className="underline hover:text-crimson">
+              <Link href="/compare/natural-vs-stealth-black" className="link-anim">
                 finish comparison
               </Link>
               .

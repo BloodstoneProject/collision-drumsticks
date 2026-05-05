@@ -133,7 +133,7 @@ export default function BeginnersPage() {
             </dl>
             <p className="mt-6 text-xs text-mute">
               From £13.50 a pair. Free UK shipping over £49. The{' '}
-              <Link href="/shop/bundles" className="underline hover:text-crimson">
+              <Link href="/shop/bundles" className="link-anim">
                 Starter Pack
               </Link>{' '}
               gives you a 5A, a 5B, and a stick bag in one go.
@@ -142,7 +142,7 @@ export default function BeginnersPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="grain bg-ink text-bone">
         <div className="container-page py-16 md:py-20">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">Beginner starter kit</p>
@@ -181,11 +181,11 @@ export default function BeginnersPage() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               For a side by side of the 5A and 5B, see the{' '}
-              <Link href="/compare/5a-vs-5b" className="underline hover:text-crimson">
+              <Link href="/compare/5a-vs-5b" className="link-anim">
                 comparison page
               </Link>
               . For practice plans and learning content, the{' '}
-              <Link href="/resources" className="underline hover:text-crimson">
+              <Link href="/resources" className="link-anim">
                 resources
               </Link>{' '}
               section is the place to start.

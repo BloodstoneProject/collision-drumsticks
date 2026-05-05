@@ -213,7 +213,7 @@ export default function CustomPage() {
           <p className="mt-4 text-mute text-pretty max-w-2xl">
             All ranges below are production time only, from artwork approval. Add the shipping
             transit time from the {' '}
-            <Link href="/shipping-delivery" className="underline hover:text-crimson">
+            <Link href="/shipping-delivery" className="link-anim">
               shipping page
             </Link>{' '}
             for total time to your door.
@@ -231,7 +231,7 @@ export default function CustomPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="grain bg-ink text-bone">
         <div className="container-page py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">Process</p>
@@ -264,11 +264,11 @@ export default function CustomPage() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               Custom can start from any base SKU. See the full lineup on the{' '}
-              <Link href="/shop/drumsticks" className="underline hover:text-crimson">drumsticks page</Link>
+              <Link href="/shop/drumsticks" className="link-anim">drumsticks page</Link>
               . For 100+ pair runs, see{' '}
-              <Link href="/wholesale" className="underline hover:text-crimson">bulk wholesale custom</Link>
+              <Link href="/wholesale" className="link-anim">bulk wholesale custom</Link>
               . Returns differ for custom: see the{' '}
-              <Link href="/returns-exchanges" className="underline hover:text-crimson">returns policy</Link>
+              <Link href="/returns-exchanges" className="link-anim">returns policy</Link>
               .
             </p>
           </div>

@@ -13,6 +13,19 @@
   --color-amber: #B8884C;
   --color-amber-deep: #8F6936;
   --color-line: #E5E2DC;
+}
+
+:root { color-scheme: light; }
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-ink: #F2EFEA;
+  --color-ink-soft: #D4D2CD;
+  --color-bone: #0A0A0A;
+  --color-cream: #161616;
+  --color-paper: #1F1F1F;
+  --color-stone: #6B6864;
+  --color-mute: #9D9994;
+  --color-line: #262626;
 
   --font-sans: var(--font-sans), system-ui, sans-serif;
   --font-display: var(--font-display), 'Bebas Neue', Impact, sans-serif;
@@ -104,6 +117,48 @@
 @layer utilities {
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
+}
+
+/* Film grain - subtle SVG noise overlay, opt-in via .grain class */
+.grain {
+  position: relative;
+  isolation: isolate;
+}
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.09;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.7 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 160px 160px;
+}
+.grain > * { position: relative; z-index: 1; }
+
+/* Underline-from-left link animation - opt-in via .link-anim class */
+.link-anim {
+  position: relative;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  padding-bottom: 2px;
+  transition: color 200ms ease;
+}
+.link-anim:hover {
+  background-image: linear-gradient(var(--color-crimson), var(--color-crimson));
+  color: var(--color-crimson);
+  animation: link-underline-sweep 320ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes link-underline-sweep {
+  0% { background-size: 0% 1px; background-position: 0 100%; }
+  100% { background-size: 100% 1px; background-position: 0 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .link-anim:hover { animation: none; background-size: 100% 1px; }
 }
 
 /* Reveal-on-scroll - opt-in via .reveal class, observed by RevealObserver */

@@ -190,7 +190,7 @@ export default function HowWeMakePage() {
         </section>
       ))}
 
-      <section className="reveal bg-ink text-bone">
+      <section className="reveal grain bg-ink text-bone">
         <div className="container-page py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">By the numbers</p>

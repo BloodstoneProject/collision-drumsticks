@@ -116,7 +116,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="reveal bg-ink text-bone">
+      <section className="reveal grain bg-ink text-bone">
         <div className="container-page py-16 md:py-20">
           <div className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
@@ -130,7 +130,7 @@ export default function Page() {
               </p>
               <p className="mt-4 text-bone/70 text-pretty">
                 For full carrier and customs detail, see the{' '}
-                <Link href="/shipping-delivery" className="underline hover:text-crimson">
+                <Link href="/shipping-delivery" className="link-anim">
                   shipping page
                 </Link>
                 .
@@ -170,11 +170,11 @@ export default function Page() {
         </div>
         <p className="mt-8 text-sm text-mute">
           For the full roster of endorsed artists worldwide,{' '}
-          <Link href="/artists" className="underline hover:text-crimson">
+          <Link href="/artists" className="link-anim">
             browse the family
           </Link>
           . To apply to the UK roster, see the{' '}
-          <Link href="/endorsements" className="underline hover:text-crimson">
+          <Link href="/endorsements" className="link-anim">
             endorsements page
           </Link>
           .
@@ -221,7 +221,7 @@ export default function Page() {
             </h2>
             <p className="mt-4 text-mute text-pretty">
               For the full list of FAQs across all topics, the{' '}
-              <Link href="/faq" className="underline hover:text-crimson">
+              <Link href="/faq" className="link-anim">
                 FAQ page
               </Link>{' '}
               has 78 entries across 7 categories.

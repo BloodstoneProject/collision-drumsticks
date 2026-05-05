@@ -14,7 +14,7 @@ export function CTABanner({
   secondaryCta?: { label: string; href: string };
 }) {
   return (
-    <section className="bg-ink text-bone">
+    <section className="grain bg-ink text-bone">
       <div className="container-page py-20 md:py-28 text-center">
         <p className="eyebrow !text-bone/60 mb-4">{eyebrow}</p>
         <h2 className="font-display heading-lg max-w-3xl mx-auto text-balance">{title}</h2>

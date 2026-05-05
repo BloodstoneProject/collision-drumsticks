@@ -217,7 +217,7 @@ export default function EndorsementsPage() {
         </p>
       </section>
 
-      <section className="reveal bg-ink text-bone">
+      <section className="reveal grain bg-ink text-bone">
         <div className="container-page py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">What we look for</p>
@@ -284,9 +284,9 @@ export default function EndorsementsPage() {
           </div>
           <p className="mt-10 text-sm text-mute text-center">
             Browse the full{' '}
-            <Link href="/artists" className="underline hover:text-crimson">roster of {stats.artists}+ endorsed players</Link>
+            <Link href="/artists" className="link-anim">roster of {stats.artists}+ endorsed players</Link>
             , or join the paid community on{' '}
-            <Link href="/backstage" className="underline hover:text-crimson">Backstage</Link>{' '}
+            <Link href="/backstage" className="link-anim">Backstage</Link>{' '}
             for member only practice content and Q&amp;As.
           </p>
         </div>
@@ -302,9 +302,9 @@ export default function EndorsementsPage() {
             <p className="mt-4 text-mute text-pretty">
               Read these before you apply. It will save us both an email exchange and it makes
               your application stronger. Other ways to work with us:{' '}
-              <Link href="/wholesale" className="underline hover:text-crimson">wholesale</Link>{' '}
+              <Link href="/wholesale" className="link-anim">wholesale</Link>{' '}
               and{' '}
-              <Link href="/affiliates" className="underline hover:text-crimson">affiliates</Link>
+              <Link href="/affiliates" className="link-anim">affiliates</Link>
               .
             </p>
           </div>

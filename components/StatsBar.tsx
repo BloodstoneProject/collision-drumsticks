@@ -9,7 +9,7 @@ export function StatsBar() {
     { value: Math.round(stats.community / 1000), suffix: 'K', label: 'Community Reach' },
   ];
   return (
-    <section className="bg-ink text-bone py-16">
+    <section className="grain bg-ink text-bone py-16">
       <div className="container-page grid grid-cols-2 md:grid-cols-4 gap-8">
         {items.map((item) => (
           <div key={item.label} className="text-center">

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProducts, getArtists, getArtist, getAllArtistSlugs } from '@/lib/data';
 import { ArtistCard } from '@/components/ArtistCard';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -58,6 +59,16 @@ export default async function ArtistPage({ params }: PageProps<'/artists/[slug]'
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }} />
       <article>
         <section className="bg-ink text-bone">
+          <div className="container-page pt-6">
+            <Breadcrumbs
+              variant="dark"
+              items={[
+                { label: 'Home', href: '/' },
+                { label: 'Artists', href: '/artists' },
+                { label: artist.name },
+              ]}
+            />
+          </div>
           <div className="container-page py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-[4/5] bg-ink-soft">
               <Image src={artist.photo_url} alt={artist.name} fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
