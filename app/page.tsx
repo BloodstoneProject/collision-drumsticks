@@ -10,15 +10,17 @@ import { Testimonial } from '@/components/Testimonial';
 import { PressBar } from '@/components/PressBar';
 import { StatsBar } from '@/components/StatsBar';
 import { CTABanner } from '@/components/CTABanner';
-import { getFeaturedProducts, getFeaturedArtists, getPosts } from '@/lib/data';
+import { RatingStars } from '@/components/RatingStars';
+import { getFeaturedProducts, getFeaturedArtists, getPosts, getRecentReviews } from '@/lib/data';
 
 export const revalidate = 600;
 
 export default async function HomePage() {
-  const [featuredProducts, featuredArtists, latestPosts] = await Promise.all([
+  const [featuredProducts, featuredArtists, latestPosts, recentReviews] = await Promise.all([
     getFeaturedProducts(4),
     getFeaturedArtists(3),
     getPosts(3),
+    getRecentReviews(8),
   ]);
 
   return (
@@ -74,6 +76,57 @@ export default async function HomePage() {
       </section>
 
       <PressBar />
+
+      {recentReviews.length > 0 && (
+        <section className="bg-cream">
+          <div className="container-page py-16 md:py-20">
+            <SectionHeader
+              eyebrow="From real customers"
+              title="What drummers are saying this month."
+              cta={{ label: 'Browse drumsticks', href: '/shop/drumsticks' }}
+            />
+            <div className="-mx-5 md:-mx-8 lg:-mx-12 px-5 md:px-8 lg:px-12 overflow-x-auto pb-2 snap-x snap-mandatory">
+              <ul className="flex gap-4 md:gap-6">
+                {recentReviews.map((r) => (
+                  <li
+                    key={r.id}
+                    className="snap-start shrink-0 w-[300px] md:w-[340px] bg-bone border border-line p-6 flex flex-col"
+                  >
+                    <RatingStars rating={r.rating} size={14} />
+                    {r.title && (
+                      <p className="mt-3 font-display text-lg leading-tight">{r.title}</p>
+                    )}
+                    <p className="mt-3 text-sm text-mute text-pretty leading-relaxed line-clamp-5 flex-1">
+                      &ldquo;{r.body}&rdquo;
+                    </p>
+                    <div className="mt-5 pt-4 border-t border-line">
+                      <p className="text-sm font-semibold">{r.customer_name}</p>
+                      {r.product_slug && r.product_name ? (
+                        <Link
+                          href={`/product/${r.product_slug}`}
+                          className="text-xs text-mute uppercase tracking-[0.12em] hover:text-crimson"
+                        >
+                          {r.product_name}
+                        </Link>
+                      ) : r.product_name ? (
+                        <p className="text-xs text-mute uppercase tracking-[0.12em]">{r.product_name}</p>
+                      ) : null}
+                      {r.is_verified_purchase && (
+                        <p className="mt-2 text-[0.65rem] uppercase tracking-[0.15em] font-semibold text-amber">
+                          Verified purchase
+                        </p>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <p className="mt-6 text-xs text-mute text-center">
+              Pulled from 548 verified customer reviews. Scroll for more.
+            </p>
+          </div>
+        </section>
+      )}
 
       <section className="container-page py-20 md:py-28">
         <SectionHeader

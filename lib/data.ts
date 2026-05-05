@@ -138,6 +138,35 @@ export async function getProductReviews(productId: string, limit = 12): Promise<
   }));
 }
 
+export async function getRecentReviews(limit = 12): Promise<(Review & { product_name?: string })[]> {
+  if (!supabase) {
+    return seed.reviews.slice(0, limit).map((r) => ({ ...r, product_name: undefined }));
+  }
+  const { data, error } = await supabase
+    .from('collision_reviews')
+    .select('id, customer_name, rating, title, body, is_verified_purchase, created_at, collision_products!inner(name, slug)')
+    .eq('is_approved', true)
+    .gte('rating', 5)
+    .not('body', 'is', null)
+    .order('created_at', { ascending: false })
+    .limit(limit);
+  if (error || !data) return [];
+  return data.map((r: Record<string, unknown>) => {
+    const product = r.collision_products as { name?: string; slug?: string } | null;
+    return {
+      id: String(r.id),
+      product_slug: product?.slug ?? '',
+      product_name: product?.name,
+      customer_name: String(r.customer_name),
+      rating: Number(r.rating),
+      title: String(r.title ?? ''),
+      body: String(r.body ?? ''),
+      is_verified_purchase: Boolean(r.is_verified_purchase),
+      created_at: String(r.created_at).slice(0, 10),
+    };
+  });
+}
+
 const POST_FIELDS =
   'id, title, slug, excerpt, content, featured_image, author, category, tags, published_at, reading_time_minutes';
 

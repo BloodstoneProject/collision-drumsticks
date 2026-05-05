@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { ProductCard } from '@/components/ProductCard';
 import { RatingStars } from '@/components/RatingStars';
 import { ProductActions } from './ProductActions';
+import { StickyBuyStrip } from './StickyBuyStrip';
 import { formatPrice } from '@/lib/utils';
 import {
   getAllProductSlugs,
@@ -121,7 +122,9 @@ export default async function ProductPage({ params }: PageProps<'/product/[slug]
             <p className="mt-4 text-mute text-pretty">{product.short_description}</p>
             <p className="mt-6 font-display text-3xl">{formatPrice(product.base_price_gbp)}</p>
 
-            <ProductActions product={product} />
+            <div id="product-actions">
+              <ProductActions product={product} />
+            </div>
 
             <div className="mt-8 grid grid-cols-2 gap-3 text-xs text-mute">
               <div className="border-t border-line pt-3">Secure Checkout</div>
@@ -229,6 +232,7 @@ export default async function ProductPage({ params }: PageProps<'/product/[slug]
           </div>
         </section>
       </div>
+      <StickyBuyStrip product={product} />
     </>
   );
 }

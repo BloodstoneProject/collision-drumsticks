@@ -5,6 +5,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { AnnouncementBar } from '@/components/AnnouncementBar';
 import { Popups } from '@/components/Popups';
+import { SearchModal } from '@/components/SearchModal';
 
 const inter = Inter({
   variable: '--font-sans',
@@ -57,6 +58,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <Popups />
+        <SearchModal />
       </body>
     </html>
   );

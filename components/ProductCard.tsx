@@ -17,6 +17,8 @@ export function ProductCard({ product, eager = false }: { product: Product; eage
     : product.base_price_gbp;
   const hasMulti = product.variants.length > 1;
 
+  const secondary = product.images.find((src) => src && src !== product.primary_image);
+
   return (
     <Link
       href={`/product/${product.slug}`}
@@ -29,10 +31,20 @@ export function ProductCard({ product, eager = false }: { product: Product; eage
           fill
           sizes="(max-width: 768px) 50vw, 25vw"
           priority={eager}
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-all duration-500 group-hover:scale-105 group-hover:opacity-0"
         />
+        {secondary && (
+          <Image
+            src={secondary}
+            alt=""
+            aria-hidden="true"
+            fill
+            sizes="(max-width: 768px) 50vw, 25vw"
+            className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+          />
+        )}
         {product.badge && (
-          <span className="absolute top-3 left-3 bg-ink text-bone text-[0.65rem] uppercase tracking-[0.15em] font-bold px-2 py-1">
+          <span className="absolute top-3 left-3 z-10 bg-ink text-bone text-[0.65rem] uppercase tracking-[0.15em] font-bold px-2 py-1">
             {BADGE_LABEL[product.badge]}
           </span>
         )}
