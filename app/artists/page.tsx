@@ -4,6 +4,7 @@ import { PageHero } from '@/components/PageHero';
 import { ArtistCard } from '@/components/ArtistCard';
 import { Testimonial } from '@/components/Testimonial';
 import { CTABanner } from '@/components/CTABanner';
+import { CountUp } from '@/components/CountUp';
 import { getArtists, getFeaturedArtists } from '@/lib/data';
 
 export const revalidate = 600;
@@ -59,19 +60,27 @@ export default async function ArtistsPage() {
         <div className="container-page py-12 md:py-16">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line">
             <div className="bg-bone p-6">
-              <p className="font-display text-5xl">{total.toLocaleString()}</p>
+              <p className="font-display text-5xl">
+                <CountUp value={total} />
+              </p>
               <p className="eyebrow mt-2">Total artists</p>
             </div>
             <div className="bg-bone p-6">
-              <p className="font-display text-5xl">{countries}</p>
+              <p className="font-display text-5xl">
+                <CountUp value={countries} />
+              </p>
               <p className="eyebrow mt-2">Countries</p>
             </div>
             <div className="bg-bone p-6">
-              <p className="font-display text-5xl">{(byTier.cruise || 0).toLocaleString()}</p>
+              <p className="font-display text-5xl">
+                <CountUp value={byTier.cruise || 0} />
+              </p>
               <p className="eyebrow mt-2">Cruise tier</p>
             </div>
             <div className="bg-bone p-6">
-              <p className="font-display text-5xl">{(byTier.approach || 0).toLocaleString()}</p>
+              <p className="font-display text-5xl">
+                <CountUp value={byTier.approach || 0} />
+              </p>
               <p className="eyebrow mt-2">Approach tier</p>
             </div>
           </div>

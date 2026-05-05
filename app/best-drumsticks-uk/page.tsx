@@ -105,7 +105,7 @@ export default function Page() {
         subtitle="Newcastle workshop. Same day dispatch before 1pm. Free shipping over £49. American Hickory, weight matched to 1 gram."
       />
 
-      <section className="container-page py-16 md:py-20">
+      <section className="reveal container-page py-16 md:py-20">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {WHY_UK.map((w) => (
             <div key={w.title} className="border-t border-ink pt-5">
@@ -116,7 +116,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="reveal bg-ink text-bone">
         <div className="container-page py-16 md:py-20">
           <div className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
@@ -153,7 +153,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="container-page py-16 md:py-20">
+      <section className="reveal container-page py-16 md:py-20">
         <div className="max-w-3xl">
           <p className="eyebrow mb-3">Played across the UK</p>
           <h2 className="font-display heading-md text-balance">
@@ -181,7 +181,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section className="bg-cream">
+      <section className="reveal bg-cream">
         <div className="container-page py-16 md:py-20">
           <div className="max-w-3xl">
             <p className="eyebrow mb-3">Pick a model</p>
@@ -212,7 +212,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="container-page py-16 md:py-20 border-t border-line">
+      <section className="reveal container-page py-16 md:py-20 border-t border-line">
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-4">
             <p className="eyebrow mb-3">UK customer FAQ</p>

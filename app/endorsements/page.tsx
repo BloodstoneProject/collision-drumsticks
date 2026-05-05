@@ -177,7 +177,7 @@ export default function EndorsementsPage() {
         backgroundImage="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1920&auto=format&fit=crop&q=80"
       />
 
-      <section className="container-page py-16">
+      <section className="reveal container-page py-16">
         <div className="grid md:grid-cols-3 gap-6">
           {TIERS.map((tier) => (
             <div key={tier.slug} className="border border-line p-8 bg-bone flex flex-col">
@@ -217,7 +217,7 @@ export default function EndorsementsPage() {
         </p>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="reveal bg-ink text-bone">
         <div className="container-page py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">What we look for</p>
@@ -241,7 +241,7 @@ export default function EndorsementsPage() {
         </div>
       </section>
 
-      <section className="container-page py-16 md:py-24">
+      <section className="reveal container-page py-16 md:py-24">
         <div className="max-w-3xl">
           <p className="eyebrow mb-3">Case studies</p>
           <h2 className="font-display heading-md text-balance">
@@ -271,7 +271,7 @@ export default function EndorsementsPage() {
         </div>
       </section>
 
-      <section className="bg-cream">
+      <section className="reveal bg-cream">
         <div className="container-page py-16 md:py-20">
           <p className="eyebrow mb-3 text-center">From the family</p>
           <h2 className="font-display heading-md mb-10 text-center text-balance">
@@ -292,7 +292,7 @@ export default function EndorsementsPage() {
         </div>
       </section>
 
-      <section className="container-page py-16 md:py-20 border-t border-line">
+      <section className="reveal container-page py-16 md:py-20 border-t border-line">
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-4">
             <p className="eyebrow mb-3">Application FAQ</p>
@@ -314,7 +314,7 @@ export default function EndorsementsPage() {
         </div>
       </section>
 
-      <section id="apply" className="container-page py-16 md:py-20">
+      <section id="apply" className="reveal container-page py-16 md:py-20">
         <div className="max-w-3xl mx-auto">
           <p className="eyebrow mb-3">Application</p>
           <h2 className="font-display heading-md mb-3 text-balance">Tell us about your playing.</h2>

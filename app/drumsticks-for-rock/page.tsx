@@ -95,7 +95,7 @@ export default function RockPage() {
               <Link href="/stick-finder" className="btn-ghost">Take the stick finder quiz</Link>
             </div>
           </div>
-          <div className="lg:col-span-5 bg-cream p-7">
+          <div className="lg:col-span-5 bg-cream p-7 lg:sticky lg:top-24 self-start">
             <p className="eyebrow text-crimson">Recommendation</p>
             <p className="mt-3 font-display text-5xl">5B</p>
             <p className="text-sm text-mute mt-2">Wood or nylon tip, your call</p>

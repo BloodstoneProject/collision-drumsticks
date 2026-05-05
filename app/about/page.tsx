@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PageHero } from '@/components/PageHero';
 import { CTABanner } from '@/components/CTABanner';
+import { CountUp } from '@/components/CountUp';
 import { stats } from '@/lib/seed-data';
 
 export const metadata: Metadata = {
@@ -119,7 +120,7 @@ export default function AboutPage() {
         subtitle="Built by a working drummer in Newcastle. Now played in 80+ countries."
       />
 
-      <section className="container-page py-16 md:py-20 grid lg:grid-cols-2 gap-12 items-center">
+      <section className="reveal container-page py-16 md:py-20 grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative aspect-[4/5] bg-cream">
           <Image
             src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=1200&auto=format&fit=crop&q=80"
@@ -156,7 +157,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-bone">
+      <section className="reveal bg-ink text-bone">
         <div className="container-page py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">Timeline</p>
@@ -180,7 +181,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="container-page py-16 md:py-24">
+      <section className="reveal container-page py-16 md:py-24">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-5">
             <p className="eyebrow mb-3">Workshop tour</p>
@@ -214,7 +215,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="container-page py-16 md:py-20 border-t border-line">
+      <section className="reveal container-page py-16 md:py-20 border-t border-line">
         <p className="eyebrow mb-3">Our values</p>
         <h2 className="font-display heading-md mb-12 text-balance max-w-2xl">
           Five things we will not compromise on.
@@ -235,26 +236,28 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-cream">
+      <section className="reveal bg-cream">
         <div className="container-page py-16 md:py-20">
           <p className="eyebrow mb-3">By the numbers</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
             {[
-              ['2014', 'Founded'],
-              [`${stats.artists}+`, 'Artists'],
-              [`${stats.countries}+`, 'Countries'],
-              [`${stats.customers.toLocaleString()}+`, 'Customers'],
-            ].map(([v, l]) => (
-              <div key={l}>
-                <p className="font-display text-5xl md:text-6xl">{v}</p>
-                <p className="eyebrow mt-2">{l}</p>
+              { v: 2014, suffix: '', label: 'Founded' },
+              { v: stats.artists, suffix: '+', label: 'Artists' },
+              { v: stats.countries, suffix: '+', label: 'Countries' },
+              { v: stats.customers, suffix: '+', label: 'Customers' },
+            ].map((item) => (
+              <div key={item.label}>
+                <p className="font-display text-5xl md:text-6xl">
+                  <CountUp value={item.v} suffix={item.suffix} />
+                </p>
+                <p className="eyebrow mt-2">{item.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="container-page py-16 md:py-24">
+      <section className="reveal container-page py-16 md:py-24">
         <div className="max-w-3xl">
           <p className="eyebrow mb-3">The team</p>
           <h2 className="font-display heading-md text-balance">
@@ -276,7 +279,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="container-page py-16 md:py-20 border-t border-line">
+      <section className="reveal container-page py-16 md:py-20 border-t border-line">
         <p className="eyebrow mb-3">Press</p>
         <h2 className="font-display heading-md mb-6 text-balance">Featured in.</h2>
         <p className="text-mute mb-8 max-w-2xl text-pretty">

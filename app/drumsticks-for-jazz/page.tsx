@@ -94,7 +94,7 @@ export default function JazzPage() {
               <Link href="/stick-finder" className="btn-ghost">Take the stick finder quiz</Link>
             </div>
           </div>
-          <div className="lg:col-span-5 bg-cream p-7">
+          <div className="lg:col-span-5 bg-cream p-7 lg:sticky lg:top-24 self-start">
             <p className="eyebrow text-crimson">Recommendation</p>
             <p className="mt-3 font-display text-5xl">7A</p>
             <p className="text-sm text-mute mt-2">Wood tip, Natural finish</p>

@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer';
 import { AnnouncementBar } from '@/components/AnnouncementBar';
 import { Popups } from '@/components/Popups';
 import { SearchModal } from '@/components/SearchModal';
+import { RevealObserver } from '@/components/RevealObserver';
 
 const inter = Inter({
   variable: '--font-sans',
@@ -59,6 +60,7 @@ export default function RootLayout({
         <Footer />
         <Popups />
         <SearchModal />
+        <RevealObserver />
       </body>
     </html>
   );

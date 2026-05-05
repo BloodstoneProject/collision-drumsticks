@@ -167,7 +167,7 @@ export default function HowWeMakePage() {
       {STEPS.map((step, i) => (
         <section
           key={step.n}
-          className={`${i % 2 === 1 ? 'bg-cream' : ''} py-16 md:py-20`}
+          className={`reveal ${i % 2 === 1 ? 'bg-cream' : ''} py-16 md:py-20`}
         >
           <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
             <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
@@ -190,7 +190,7 @@ export default function HowWeMakePage() {
         </section>
       ))}
 
-      <section className="bg-ink text-bone">
+      <section className="reveal bg-ink text-bone">
         <div className="container-page py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="eyebrow !text-bone/60 mb-3">By the numbers</p>
@@ -214,7 +214,7 @@ export default function HowWeMakePage() {
         </div>
       </section>
 
-      <section className="container-page py-16 md:py-24">
+      <section className="reveal container-page py-16 md:py-24">
         <div className="max-w-3xl">
           <p className="eyebrow mb-3">Materials</p>
           <h2 className="font-display heading-md text-balance">
@@ -236,7 +236,7 @@ export default function HowWeMakePage() {
         </div>
       </section>
 
-      <section className="bg-cream">
+      <section className="reveal bg-cream">
         <div className="container-page py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="eyebrow mb-3">Vs imported brands</p>
@@ -271,7 +271,7 @@ export default function HowWeMakePage() {
         </div>
       </section>
 
-      <section className="container-page py-16 md:py-20 border-t border-line">
+      <section className="reveal container-page py-16 md:py-20 border-t border-line">
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-4">
             <p className="eyebrow mb-3">Process FAQ</p>
