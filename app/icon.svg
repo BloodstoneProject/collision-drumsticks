@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <style>
+    .stick { fill: #0A0A0A; }
+    .tip { fill: #C41E1E; }
+    @media (prefers-color-scheme: dark) {
+      .stick { fill: #FFFFFF; }
+    }
+  </style>
+  <g transform="translate(16 16)">
+    <g transform="rotate(-45)">
+      <rect class="stick" x="-13" y="-1.5" width="22" height="3" rx="1.5"/>
+      <circle class="tip" cx="11" cy="0" r="2.5"/>
+    </g>
+    <g transform="rotate(-135)">
+      <rect class="stick" x="-13" y="-1.5" width="22" height="3" rx="1.5"/>
+      <circle class="tip" cx="11" cy="0" r="2.5"/>
+    </g>
+  </g>
+</svg>
