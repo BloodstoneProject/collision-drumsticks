@@ -94,7 +94,7 @@ export default function ContactPage() {
             <div className="mt-10">
               <p className="eyebrow mb-3">Self serve first</p>
               <ul className="space-y-2 text-sm">
-                <li><Link href="/faq" className="underline hover:text-crimson">FAQ (52 entries across 7 topics)</Link></li>
+                <li><Link href="/faq" className="underline hover:text-crimson">FAQ (78 entries across 7 topics)</Link></li>
                 <li><Link href="/shipping-delivery" className="underline hover:text-crimson">Shipping & delivery times by country</Link></li>
                 <li><Link href="/returns-exchanges" className="underline hover:text-crimson">Returns & refund policy</Link></li>
                 <li><Link href="/endorsements" className="underline hover:text-crimson">Endorsement applications</Link></li>
