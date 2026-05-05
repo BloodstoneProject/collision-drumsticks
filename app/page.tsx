@@ -60,8 +60,8 @@ export default async function HomePage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden border border-line">
             <Image
-              src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=1400&auto=format&fit=crop&q=80"
-              alt="Collision drumsticks"
+              src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=1400&auto=format&fit=crop&q=80"
+              alt="Drumsticks on a snare"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
